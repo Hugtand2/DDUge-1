@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://bna0lr445tk7h"]
+[gd_scene format=3 uid="uid://cxftbpdnvtbgb"]
 
-[node name="Node2D" type="Node2D" unique_id=1804301130]
+[ext_resource type="Texture2D" uid="uid://cpeldye25kakc" path="res://Resources/MainMenuBackground.jpg" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dcwogk5bve4o8" path="res://Resources/PlayButton/PlayButton.png" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bseyoabs418ph" path="res://Resources/PlayButton/Clickbutton.png" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://diwe78bo1qlt4" path="res://Resources/PlayButton/PlayButtonHover.png" id="4_272bh"]
+
+[node name="Control" type="Control" unique_id=1686155103]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=58332214]
+position = Vector2(960, 540)
+texture = ExtResource("1_1bvp3")
+
+[node name="MainMenuPlayButton" type="TextureButton" parent="." unique_id=1993455512]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 136.0
+offset_right = 1291.0
+offset_bottom = 356.0
+texture_normal = ExtResource("2_lquwl")
+texture_pressed = ExtResource("3_7mycd")
+texture_hover = ExtResource("4_272bh")
