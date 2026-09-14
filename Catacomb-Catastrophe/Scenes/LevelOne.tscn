@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dgsadhp1rx5e6"]
 
-[ext_resource type="Texture2D" uid="uid://civbl33f6ft3j" path="res://Resources/icon.svg" id="1_vwlbn"]
 [ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_6ha17"]
+[ext_resource type="PackedScene" uid="uid://bj1q70lwujrh" path="res://Player.tscn" id="3_6b1hk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
 texture = ExtResource("2_6ha17")
@@ -43,7 +43,6 @@ tile_set = SubResource("TileSet_21xkr")
 position = Vector2(40, 40)
 zoom = Vector2(13.525, 13.525)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=2019438000]
+[node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("3_6b1hk")]
 position = Vector2(56.00001, 24)
 scale = Vector2(0.10937482, 0.10937499)
-texture = ExtResource("1_vwlbn")
