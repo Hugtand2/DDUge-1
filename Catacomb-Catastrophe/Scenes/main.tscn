@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dcwogk5bve4o8" path="res://Resources/PlayButton/PlayButton.png" id="3_6bp64"]
 [ext_resource type="Texture2D" uid="uid://bseyoabs418ph" path="res://Resources/PlayButton/Clickbutton.png" id="4_344ge"]
 [ext_resource type="Texture2D" uid="uid://diwe78bo1qlt4" path="res://Resources/PlayButton/PlayButtonHover.png" id="5_ynf5e"]
+[ext_resource type="Script" uid="uid://kjecm0glg86v" path="res://Scenes/audio_stream_player.gd" id="6_21xkr"]
 
 [node name="Control" type="Control" unique_id=1686155103]
 layout_mode = 3
@@ -28,3 +29,6 @@ offset_bottom = 356.0
 texture_normal = ExtResource("3_6bp64")
 texture_pressed = ExtResource("4_344ge")
 texture_hover = ExtResource("5_ynf5e")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1914986840]
+script = ExtResource("6_21xkr")
