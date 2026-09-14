@@ -1,0 +1,49 @@
+[gd_scene format=4 uid="uid://dgsadhp1rx5e6"]
+
+[ext_resource type="Texture2D" uid="uid://civbl33f6ft3j" path="res://Resources/icon.svg" id="1_vwlbn"]
+[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_6ha17"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
+texture = ExtResource("2_6ha17")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_21xkr"]
+sources/0 = SubResource("TileSetAtlasSource_6b1hk")
+
+[node name="LevelOne" type="Node2D" unique_id=673032643]
+
+[node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=110184097]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_21xkr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1345632301]
+position = Vector2(40, 40)
+zoom = Vector2(13.525, 13.525)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2019438000]
+position = Vector2(56.00001, 24)
+scale = Vector2(0.10937482, 0.10937499)
+texture = ExtResource("1_vwlbn")
