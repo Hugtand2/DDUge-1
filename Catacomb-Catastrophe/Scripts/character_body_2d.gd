@@ -24,3 +24,9 @@ func _move(dir: Vector2):
 	sprite_node_pos_tween = create_tween()
 	sprite_node_pos_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	sprite_node_pos_tween.tween_property($Sprite2D, "global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
+
+# Proccesses every frame
+func _process(delta: float) -> void:
+	# Checks if "z" is pressed
+	if Input.is_key_pressed(KEY_Z):
+		Levels.reset_level()

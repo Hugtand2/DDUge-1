@@ -1,4 +1,5 @@
 extends AudioStreamPlayer
+# Autoload
 
 @onready var music_player: AudioStreamPlayer = self
 
@@ -6,11 +7,21 @@ extends AudioStreamPlayer
 func _ready() -> void:
 	play_custom_track("res://Music/Ancient Egyptian Music  Osiris.mp3")
 
+var current_track = ""
+
 func stop_music() -> void:
-	music_player.stop()
+	current_track = ""
+	stop()
 
 func play_custom_track(file_path: String) -> void:
+	# Checks if track is already playing
+	if current_track == file_path and playing:
+		return
+	current_track = file_path
+	
+	# Changes track
 	var stream = load(file_path)
 	if stream:
-		music_player.stream = stream
-		music_player.play()
+		stream.loop = true
+		self.stream = stream
+		play()
