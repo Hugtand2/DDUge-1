@@ -32,18 +32,19 @@ func push_block(dir: Vector2, raycast: RayCast2D):
 	# Moves only if you push from the top or bottom of the sarcophagus
 	if upright:
 		if dir.y != 0:
-			if not pushable or ray_cast_2d_lower.is_colliding() or ray_cast_2d_upper.is_colliding():
+			if ray_cast_2d_lower.is_colliding() or ray_cast_2d_upper.is_colliding():
 				return
 			_move_animation(global_position + dir * tile_size)
 		else:
-			push_and_rotate(dir, raycast)
+			push_and_rotate(raycast)
 	else:
 		if dir.x != 0:
-			if not pushable or ray_cast_2d_lower.is_colliding() or ray_cast_2d_upper.is_colliding():
+			if ray_cast_2d_lower.is_colliding() or ray_cast_2d_upper.is_colliding():
 				return
 			_move_animation(global_position + dir * tile_size)
 		else:
-			push_and_rotate(dir, raycast)
+			push_and_rotate(raycast)
+			
 	
 	
 	
@@ -53,21 +54,35 @@ func _move_animation(targetPosition):
 	tween.tween_property(self,"global_position", targetPosition, 0.185).set_trans(Tween.TRANS_SINE)
 	tween.finished.connect(func(): is_moving = false)
 
-func push_and_rotate(dir: Vector2, raycast: RayCast2D) -> void:
+func push_and_rotate(raycast: RayCast2D) -> void:
+	var local_pos = to_local(player.global_position)
+	
 	if raycast == player.get_node("right"):
-		if raycast.target_position == ray_cast_2d_upper.target_position - Vector2(16, 0):
-			print("Push from upperleft")
-			return
-		if raycast.target_position == ray_cast_2d_lower.target_position - Vector2(16, 0):
-			print("Push from lowerleft")
-			return
+		# Player is pushing from the left side
+		if local_pos.y < 0:
+			print("upper-left")
+		else:
+			print("upper-right")
 	else:
-		if raycast.target_position == ray_cast_2d_upper.target_position - Vector2(16, 0):
-			print("Push from upperright")
-			return
-		if raycast.target_position == ray_cast_2d_lower.target_position - Vector2(16, 0):
-			print("Push from lowerright")
-			return
+		# Player is pushing from the rihgt side
+		if local_pos.y < 0:
+			print("lower-left")
+		else:
+			print("lower-right")
+	#if raycast == player.get_node("right"):
+		#if raycast.target_position == ray_cast_2d_upper.target_position - Vector2(16, 0):
+			#print("Push from upperleft")
+			#return
+		#if raycast.target_position == ray_cast_2d_lower.target_position - Vector2(16, 0):
+			#print("Push from lowerleft")
+			#return
+	#else:
+		#if raycast.target_position == ray_cast_2d_upper.target_position - Vector2(16, 0):
+			#print("Push from upperright")
+			#return
+		#if raycast.target_position == ray_cast_2d_lower.target_position - Vector2(16, 0):
+			#print("Push from lowerright")
+			#return
 
 
 func do_rotation() -> void:
