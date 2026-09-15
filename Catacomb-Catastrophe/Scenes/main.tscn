@@ -28,3 +28,7 @@ offset_bottom = 356.0
 texture_normal = ExtResource("3_6bp64")
 texture_pressed = ExtResource("4_344ge")
 texture_hover = ExtResource("5_ynf5e")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1254674282]
+position = Vector2(958, 539)
+zoom = Vector2(0.601, 0.601)

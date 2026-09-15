@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	MusicPlayer.play_custom_track("res://Music/Ape Escape 2 ( Panic Pyramid ) Soundtrack  OST.mp3")
+	Levels.setup()
 	pass # Replace with function body.
 
 

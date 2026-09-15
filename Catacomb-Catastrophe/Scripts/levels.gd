@@ -4,6 +4,11 @@ extends Node2D
 func _ready() -> void:
 	pass # Replace with function body.
 
+# Called upon level startup
+func setup() -> void:
+	MusicPlayer.play_custom_track("res://Music/Ape Escape 2 ( Panic Pyramid ) Soundtrack  OST.mp3")
+	
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

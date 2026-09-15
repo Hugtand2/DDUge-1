@@ -27,6 +27,6 @@ func _move(dir: Vector2):
 
 # Proccesses every frame
 func _process(delta: float) -> void:
-	# Checks if "z" is pressed
-	if Input.is_key_pressed(KEY_Z):
+	# Checks if "r" is pressed
+	if Input.is_key_pressed(KEY_R):
 		Levels.reset_level()

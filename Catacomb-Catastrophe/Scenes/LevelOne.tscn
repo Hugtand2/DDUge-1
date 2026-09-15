@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="2_6b1hk"]
 [ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_6ha17"]
 [ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="3_6b1hk"]
+[ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="5_080ts"]
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="5_t5ss4"]
 
 [sub_resource type="GDScript" id="GDScript_tocei"]
@@ -231,10 +232,6 @@ tile_set = SubResource("TileSet_21xkr")
 tile_map_data = PackedByteArray("AAD//wUAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAP//AAAAAAAAAAD/////AAAAAAAAAAAAAAUAAAABAAQAAAABAAUAAAABAAQAAAACAAUAAAABAAQAAAADAAUAAAABAAQAAAAEAAUAAAABAAQAAAD//wEAAAAAAAMAAAD//wIAAAAAAAMAAAD//wAAAAAAAAMAAAD//wMAAAAAAAMAAAD//wQAAAAAAAMAAAAFAAAAAAAAAAMAAAAFAAEAAAAAAAMAAAAFAAIAAAAAAAMAAAAFAAMAAAAAAAMAAAAFAAQAAAAAAAMAAAAAAP//AAABAAMAAAABAP//AAABAAMAAAACAP//AAABAAMAAAADAP//AAABAAMAAAAEAP//AAABAAMAAAA=")
 tile_set = SubResource("TileSet_yyq1l")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1345632301]
-position = Vector2(40, 40)
-zoom = Vector2(13.525, 13.525)
-
 [node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("3_6b1hk")]
 position = Vector2(72, 8)
 
@@ -242,3 +239,9 @@ position = Vector2(72, 8)
 position = Vector2(24, 16)
 pushable = true
 maxPushes = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1847131771]
+position = Vector2(40, 40)
+zoom = Vector2(5, 5)
+
+[node name="CanvasLayer" parent="Camera2D" unique_id=1416940851 instance=ExtResource("5_080ts")]
