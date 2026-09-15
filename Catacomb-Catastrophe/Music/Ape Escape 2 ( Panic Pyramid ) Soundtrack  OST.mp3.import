@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cae4ikhcncmo7"
+path="res://.godot/imported/Ape Escape 2 ( Panic Pyramid ) Soundtrack  OST.mp3-3993f45b0d8f34f9b2ee50f6cef0e03e.mp3str"
+
+[deps]
+
+source_file="res://Music/Ape Escape 2 ( Panic Pyramid ) Soundtrack  OST.mp3"
+dest_files=["res://.godot/imported/Ape Escape 2 ( Panic Pyramid ) Soundtrack  OST.mp3-3993f45b0d8f34f9b2ee50f6cef0e03e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
