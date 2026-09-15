@@ -1,10 +1,7 @@
 [gd_scene format=4 uid="uid://dgsadhp1rx5e6"]
 
-<<<<<<< Updated upstream
-[ext_resource type="Script" uid="uid://bk2sva7p12yqn" path="res://Scripts/level_one.gd" id="1_6b1hk"]
-=======
+[ext_resource type="Script" uid="uid://c44ta4tmgcvs6" path="res://Scenes/level_one.gd" id="1_tocei"]
 [ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="2_6b1hk"]
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_6ha17"]
 [ext_resource type="PackedScene" uid="uid://bj1q70lwujrh" path="res://Scenes/Player.tscn" id="3_6b1hk"]
 
@@ -209,7 +206,7 @@ physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_tocei")
 
 [node name="LevelOne" type="Node2D" unique_id=673032643]
-script = ExtResource("1_6b1hk")
+script = ExtResource("1_tocei")
 
 [node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=110184097]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAA=")
