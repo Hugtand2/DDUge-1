@@ -4,6 +4,7 @@ const tile_size: Vector2 = Vector2(16, 16)
 
 var is_rotated: bool = false
 var is_moving: bool = false
+var upright: bool = true
 
 @export var pushable := true
 @export var maxPushes := -1
@@ -26,16 +27,34 @@ func push_block(dir: Vector2):
 	ray_cast_2d_lower.force_raycast_update()
 	ray_cast_2d_upper.force_raycast_update()
 	
-	if not pushable or ray_cast_2d_lower.is_colliding() or ray_cast_2d_upper.is_colliding():
-		return
-		
-	_move_animation(global_position + dir * tile_size)
+	
+	# Moves only if you push from the top or bottom of the sarcophagus
+	if upright:
+		if dir.y != 0:
+			if not pushable or ray_cast_2d_lower.is_colliding() or ray_cast_2d_upper.is_colliding():
+				return
+			_move_animation(global_position + dir * tile_size)
+		else:
+			push_and_rotate(dir)
+	else:
+		if dir.x != 0:
+			if not pushable or ray_cast_2d_lower.is_colliding() or ray_cast_2d_upper.is_colliding():
+				return
+			_move_animation(global_position + dir * tile_size)
+		else:
+			push_and_rotate(dir)
+	
+	
 	
 func _move_animation(targetPosition):
 	is_moving = true
 	var tween = get_tree().create_tween()
 	tween.tween_property(self,"global_position", targetPosition, 0.185).set_trans(Tween.TRANS_SINE)
 	tween.finished.connect(func(): is_moving = false)
+
+func push_and_rotate(dir: Vector2) -> void:
+	do_rotation()
+	pass
 
 func do_rotation() -> void:
 	is_rotated = !is_rotated

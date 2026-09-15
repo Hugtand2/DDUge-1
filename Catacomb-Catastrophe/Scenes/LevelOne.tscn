@@ -222,7 +222,7 @@ tile_set = SubResource("TileSet_yyq1l")
 position = Vector2(40, 56)
 
 [node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("5_t5ss4")]
-position = Vector2(24, 16)
+position = Vector2(24, 32)
 maxPushes = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1847131771]
