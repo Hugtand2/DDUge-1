@@ -7,9 +7,13 @@
 size = Vector2(8, 8)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=822320731]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_kpjcp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=851114173]
+position = Vector2(-7.1525574e-07, -1.3113022e-06)
+scale = Vector2(0.115, 0.115)
 texture = ExtResource("2_kne1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1153557629]
@@ -18,19 +22,27 @@ shape = SubResource("RectangleShape2D_qnpof")
 [node name="up" type="RayCast2D" parent="." unique_id=1167485089]
 position = Vector2(0, -8)
 target_position = Vector2(0, -8)
+collision_mask = 2
 hit_from_inside = true
+collide_with_areas = true
 
 [node name="down" type="RayCast2D" parent="." unique_id=1164764531]
 position = Vector2(0, 8)
 target_position = Vector2(0, 8)
+collision_mask = 2
 hit_from_inside = true
+collide_with_areas = true
 
 [node name="left" type="RayCast2D" parent="." unique_id=125480342]
 position = Vector2(-8, 0)
 target_position = Vector2(-8, 0)
+collision_mask = 2
 hit_from_inside = true
+collide_with_areas = true
 
 [node name="right" type="RayCast2D" parent="." unique_id=1415371034]
 position = Vector2(8, 0)
 target_position = Vector2(8, 0)
+collision_mask = 2
 hit_from_inside = true
+collide_with_areas = true
