@@ -4,6 +4,8 @@ const tile_size: Vector2 = Vector2(16, 16)
 var sprite_node_pos_tween: Tween
 
 
+
+
 func _physics_process(delta: float) -> void:
 	if !sprite_node_pos_tween or !sprite_node_pos_tween.is_running():
 		if Input.is_action_pressed("ui_up"):
@@ -19,7 +21,7 @@ func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
 		if collider and collider.has_method("push_block"):
-			collider.push_block(dir)
+			collider.push_block(dir, raycast)
 		return
 	_move(dir)
 
