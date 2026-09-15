@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_6ha17"]
 [ext_resource type="PackedScene" uid="uid://bj1q70lwujrh" path="res://Player.tscn" id="3_6b1hk"]
+[ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://static_body_2d.tscn" id="3_tocei"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
 texture = ExtResource("2_6ha17")
@@ -46,3 +47,6 @@ zoom = Vector2(13.525, 13.525)
 [node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("3_6b1hk")]
 position = Vector2(56.00001, 24)
 scale = Vector2(0.10937482, 0.10937499)
+
+[node name="StaticBody2D" parent="." unique_id=1514378569 instance=ExtResource("3_tocei")]
+position = Vector2(24, 32)
