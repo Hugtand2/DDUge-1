@@ -1,25 +1,11 @@
 [gd_scene format=4 uid="uid://dgsadhp1rx5e6"]
 
+[ext_resource type="Script" uid="uid://c44ta4tmgcvs6" path="res://Scripts/level_one.gd" id="1_080ts"]
 [ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="2_6b1hk"]
 [ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_6ha17"]
 [ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="3_6b1hk"]
 [ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="5_080ts"]
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="5_t5ss4"]
-
-[sub_resource type="GDScript" id="GDScript_tocei"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	MusicPlayer.play_custom_track(\"res://Music/Ape Escape 2 ( Panic Pyramid ) Soundtrack  OST.mp3\")
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
 texture = ExtResource("2_6ha17")
@@ -222,22 +208,21 @@ physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_tocei")
 
 [node name="LevelOne" type="Node2D" unique_id=673032643]
-script = SubResource("GDScript_tocei")
+script = ExtResource("1_080ts")
 
 [node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=110184097]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAIAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_21xkr")
 
 [node name="WallsTileMapLayer" type="TileMapLayer" parent="." unique_id=1748003041]
-tile_map_data = PackedByteArray("AAD//wUAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAP//AAAAAAAAAAD/////AAAAAAAAAAAAAAUAAAABAAQAAAABAAUAAAABAAQAAAACAAUAAAABAAQAAAADAAUAAAABAAQAAAAEAAUAAAABAAQAAAD//wEAAAAAAAMAAAD//wIAAAAAAAMAAAD//wAAAAAAAAMAAAD//wMAAAAAAAMAAAD//wQAAAAAAAMAAAAFAAAAAAAAAAMAAAAFAAEAAAAAAAMAAAAFAAIAAAAAAAMAAAAFAAMAAAAAAAMAAAAFAAQAAAAAAAMAAAAAAP//AAABAAMAAAABAP//AAABAAMAAAACAP//AAABAAMAAAADAP//AAABAAMAAAAEAP//AAABAAMAAAA=")
+tile_map_data = PackedByteArray("AAD//wUAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAP//AAAAAAAAAAD/////AAAAAAAAAAAAAAUAAAABAAQAAAABAAUAAAABAAQAAAACAAUAAAABAAQAAAADAAUAAAABAAQAAAAEAAUAAAABAAQAAAD//wEAAAAAAAMAAAD//wIAAAAAAAMAAAD//wAAAAAAAAMAAAD//wMAAAAAAAMAAAD//wQAAAAAAAMAAAAFAAAAAAAAAAMAAAAFAAEAAAAAAAMAAAAFAAMAAAAAAAMAAAAFAAQAAAAAAAMAAAAAAP//AAABAAMAAAABAP//AAABAAMAAAACAP//AAABAAMAAAADAP//AAABAAMAAAAEAP//AAABAAMAAAA=")
 tile_set = SubResource("TileSet_yyq1l")
 
 [node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("3_6b1hk")]
-position = Vector2(72, 8)
+position = Vector2(40, 56)
 
 [node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("5_t5ss4")]
 position = Vector2(24, 16)
-pushable = true
 maxPushes = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1847131771]

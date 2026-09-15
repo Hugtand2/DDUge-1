@@ -3,32 +3,39 @@ extends StaticBody2D
 const tile_size: Vector2 = Vector2(16, 16)
 
 var is_rotated: bool = false
+var is_moving: bool = false
 
-@export var pushable := false
+@export var pushable := true
 @export var maxPushes := -1
 @export var dimentions: Vector2i
 
-@onready var ray_cast_2d: RayCast2D = $RayCast2D
-
-var currentPushCount = 0
+@onready var ray_cast_2d_lower: RayCast2D = $Raycasts/RayCast2DLower
+@onready var ray_cast_2d_upper: RayCast2D = $Raycasts/RayCast2DUpper
 
 func _ready() -> void:
-	ray_cast_2d.enabled = pushable
+	ray_cast_2d_lower.enabled = pushable
+	ray_cast_2d_upper.enabled = pushable
 	
 func push_block(dir: Vector2):
-	ray_cast_2d.target_position = dir * tile_size
-	ray_cast_2d.force_raycast_update()
+	if is_moving or not pushable:
+		return
 	
+	ray_cast_2d_lower.target_position = dir * tile_size
+	ray_cast_2d_upper.target_position = dir * tile_size
 	
-	if not pushable or ray_cast_2d.is_colliding() or currentPushCount == maxPushes: return
+	ray_cast_2d_lower.force_raycast_update()
+	ray_cast_2d_upper.force_raycast_update()
 	
+	if not pushable or ray_cast_2d_lower.is_colliding() or ray_cast_2d_upper.is_colliding():
+		return
+		
 	_move_animation(global_position + dir * tile_size)
 	
-	currentPushCount += 1
-	
 func _move_animation(targetPosition):
+	is_moving = true
 	var tween = get_tree().create_tween()
 	tween.tween_property(self,"global_position", targetPosition, 0.185).set_trans(Tween.TRANS_SINE)
+	tween.finished.connect(func(): is_moving = false)
 
 func do_rotation() -> void:
 	is_rotated = !is_rotated

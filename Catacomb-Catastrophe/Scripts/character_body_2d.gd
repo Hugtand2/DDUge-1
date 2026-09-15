@@ -6,14 +6,22 @@ var sprite_node_pos_tween: Tween
 
 func _physics_process(delta: float) -> void:
 	if !sprite_node_pos_tween or !sprite_node_pos_tween.is_running():
-		if Input.is_action_pressed("ui_up") and !$up.is_colliding():
-			_move(Vector2(0, -1))
-		elif Input.is_action_pressed("ui_down") and !$down.is_colliding():
-			_move(Vector2(0, 1))
-		elif Input.is_action_pressed("ui_left") and !$left.is_colliding():
-			_move(Vector2(-1, 0))
-		elif Input.is_action_pressed("ui_right") and !$right.is_colliding():
-			_move(Vector2(1, 0))
+		if Input.is_action_pressed("ui_up"):
+			_try_move(Vector2(0, -1), $up)
+		elif Input.is_action_pressed("ui_down"):
+			_try_move(Vector2(0, 1), $down)
+		elif Input.is_action_pressed("ui_left"):
+			_try_move(Vector2(-1, 0), $left)
+		elif Input.is_action_pressed("ui_right"):
+			_try_move(Vector2(1, 0), $right)
+
+func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
+	if raycast.is_colliding():
+		var collider = raycast.get_collider()
+		if collider and collider.has_method("push_block"):
+			collider.push_block(dir)
+		return
+	_move(dir)
 
 func _move(dir: Vector2):
 	global_position += dir * tile_size

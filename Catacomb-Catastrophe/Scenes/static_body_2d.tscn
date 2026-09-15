@@ -7,6 +7,7 @@
 size = Vector2(16, 32)
 
 [node name="Sarcophagus" type="StaticBody2D" unique_id=1514378569]
+collision_mask = 4
 script = ExtResource("1_ypqmy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=332572058]
@@ -15,6 +16,14 @@ texture = ExtResource("2_dyby8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1433133027]
 shape = SubResource("RectangleShape2D_qnpof")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=237256011]
+[node name="Raycasts" type="Node2D" parent="." unique_id=529731304]
 position = Vector2(0, 8)
+
+[node name="RayCast2DLower" type="RayCast2D" parent="Raycasts" unique_id=237256011]
 target_position = Vector2(0, 8)
+collision_mask = 3
+
+[node name="RayCast2DUpper" type="RayCast2D" parent="Raycasts" unique_id=899496084]
+position = Vector2(0, -16)
+target_position = Vector2(0, 8)
+collision_mask = 3
