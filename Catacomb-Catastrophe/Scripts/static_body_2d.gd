@@ -4,8 +4,8 @@ const tile_size: Vector2 = Vector2(16, 16)
 
 var is_rotated: bool = false
 var is_moving: bool = false
-var upright: bool = true
 
+@export var upright: bool
 @export var pushable := true
 @export var maxPushes := -1
 @export var dimentions: Vector2i
@@ -28,9 +28,6 @@ func push_block(dir: Vector2, raycast: RayCast2D):
 	ray_cast_2d_lower.force_raycast_update()
 	ray_cast_2d_upper.force_raycast_update()
 	
-	# Check if upright
-	if ray_cast_2d_lower.target_position.y == ray_cast_2d_upper.target_position.y:
-		upright = false
 	
 	# Moves only if you push from the top or bottom of the sarcophagus
 	if upright:
@@ -47,8 +44,6 @@ func push_block(dir: Vector2, raycast: RayCast2D):
 			_move_animation(global_position + dir * tile_size)
 		else:
 			push_and_rotate(raycast)
-			
-	
 	
 	
 func _move_animation(targetPosition):
