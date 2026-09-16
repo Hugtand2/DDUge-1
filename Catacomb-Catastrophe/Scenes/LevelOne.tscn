@@ -222,8 +222,8 @@ tile_set = SubResource("TileSet_yyq1l")
 position = Vector2(40, 56)
 
 [node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("5_t5ss4")]
-position = Vector2(24, 32)
-upright = true
+position = Vector2(32, 24)
+rotation = 1.5707964
 maxPushes = 1
 player = NodePath("../CharacterBody2D")
 

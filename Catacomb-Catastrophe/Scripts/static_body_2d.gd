@@ -56,20 +56,33 @@ func _move_animation(targetPosition):
 	tween.finished.connect(func(): is_moving = false)
 
 func push_and_rotate(raycast: RayCast2D) -> void:
-	var local_pos = to_local(player.global_position)
-	
-	if raycast == player.get_node("right"):
-		# Player is pushing from the left side
-		if local_pos.y < 0:
-			print("upper-left")
+	var offset = player.global_position - global_position
+	if upright:
+		if raycast == player.get_node("right"):
+			# Player is pushing from the left side
+			if offset.y < 0:
+				print("upper-left")
+			else:
+				print("lower-left")
 		else:
-			print("lower-left")
+			# Player is pushing from the rihgt side
+			if offset.y < 0:
+				print("upper-right")
+			else:
+				print("lower-right")
 	else:
-		# Player is pushing from the rihgt side
-		if local_pos.y < 0:
-			print("upper-right")
+		if raycast == player.get_node("up"):
+			# Player is pushing from the lower side
+			if offset.x < 0:
+				print("lower-right")
+			else:
+				print("upper-right")
 		else:
-			print("lower-right")
+			# Player is pushing from the rihgt side
+			if offset.x < 0:
+				print("lower-left")
+			else:
+				print("upper-left")
 
 
 func do_rotation() -> void:
