@@ -1,8 +1,6 @@
 extends StaticBody2D
 
 const tile_size: Vector2 = Vector2(16, 16)
-
-var is_rotated: bool = false
 var is_moving: bool = false
 
 @export var sarc_dir: Vector2
@@ -11,11 +9,11 @@ var upright: bool = true
 
 @export var pushable := true
 @export var maxPushes := -1
-@export var dimentions: Vector2i
 @export var player: CharacterBody2D
 
 @onready var ray_cast_2d_lower: RayCast2D = $Raycasts/RayCast2DLower
 @onready var ray_cast_2d_upper: RayCast2D = $Raycasts/RayCast2DUpper
+@onready var current_rotation: int = 0
 
 func _ready() -> void:
 	if sarc_dir == Vector2(1,0) or sarc_dir == Vector2(-1,0):
@@ -67,86 +65,131 @@ func _move_animation(targetPosition):
 	tween.finished.connect(func(): is_moving = false)
 
 func push_and_rotate(raycast: RayCast2D) -> void:
+	#print("Function start current_rotation: " + str(current_rotation))
 	var offset = player.global_position - global_position
 	if sarc_dir == Vector2(0, -1):
 		if raycast == player.get_node("right"):
 			# Player is pushing from the left side
 			if offset.y < 0:
 				print("upper-left")
-				do_rotation(current_rotation + 90)
+				current_rotation += 90
+				do_rotation(current_rotation, Vector2(-8, -8))
+				sarc_dir = Vector2(1,0)
+				#print("Function turn current_rotation: " + str(current_rotation))
 			else:
 				print("lower-left")
-				do_rotation(current_rotation - 90)
+				current_rotation -= 90
+				do_rotation(current_rotation, Vector2(-8, 8))
+				sarc_dir = Vector2(-1,0)
+				#print("Function turn current_rotation: " + str(current_rotation))
 		else:
-			# Player is pushing from the rihgt side
+			# Player is pushing from the right side
 			if offset.y < 0:
 				print("upper-right")
-				do_rotation(current_rotation - 90)
+				current_rotation -= 90
+				do_rotation(current_rotation, Vector2(8, -8))
+				sarc_dir = Vector2(-1,0)
+				#print("Function turn current_rotation: " + str(current_rotation))
 			else:
 				print("lower-right")
-				do_rotation(current_rotation + 90)
+				current_rotation += 90
+				do_rotation(current_rotation, Vector2(8, 8))
+				sarc_dir = Vector2(1,0)
+				#print("Function turn current_rotation: " + str(current_rotation))
 	elif sarc_dir == Vector2(1, 0):
 		if raycast == player.get_node("up"):
-			# Player is pushing from the lower side
+			# Player is pushing from the right side
 			if offset.x < 0:
 				print("lower-right")
-				do_rotation(current_rotation + 90)
+				current_rotation += 90
+				do_rotation(current_rotation, Vector2(-8, 8))
+				sarc_dir = Vector2(0,1)
+				#print("Function turn current_rotation: " + str(current_rotation))
 			else:
 				print("upper-right")
-				do_rotation(current_rotation - 90)
+				current_rotation -= 90
+				do_rotation(current_rotation, Vector2(8, 8))
+				sarc_dir = Vector2(0,-1)
+				#print("Function turn current_rotation: " + str(current_rotation))
 		else:
-			# Player is pushing from the rihgt side
+			# Player is pushing from the left side
 			if offset.x < 0:
 				print("lower-left")
-				do_rotation(current_rotation - 90)
+				current_rotation -= 90
+				do_rotation(current_rotation, Vector2(-8, -8))
+				sarc_dir = Vector2(0,-1)
+				#print("Function turn current_rotation: " + str(current_rotation))
 			else:
 				print("upper-left")
-				do_rotation(current_rotation + 90)
+				current_rotation += 90
+				do_rotation(current_rotation, Vector2(8, -8))
+				sarc_dir = Vector2(0,1)
+				#print("Function turn current_rotation: " + str(current_rotation))
 	elif sarc_dir == Vector2(0, 1):
 		if raycast == player.get_node("left"):
 			# Player is pushing from the lower side
 			if offset.y > 0:
 				print("upper-left")
-				do_rotation(current_rotation + 90)
+				current_rotation += 90
+				do_rotation(current_rotation, Vector2(8, 8))
+				sarc_dir = Vector2(-1,0)
+				#print("Function turn current_rotation: " + str(current_rotation))
 			else:
 				print("lower-left")
-				do_rotation(current_rotation - 90)
+				current_rotation -= 90
+				do_rotation(current_rotation, Vector2(8, -8))
+				sarc_dir = Vector2(1,0)
+				#print("Function turn current_rotation: " + str(current_rotation))
 		else:
 			# Player is pushing from the rihgt side
 			if offset.y > 0:
 				print("upper-right")
-				do_rotation(current_rotation - 90)
+				current_rotation -= 90
+				do_rotation(current_rotation, Vector2(-8, 8))
+				sarc_dir = Vector2(1,0)
+				#print("Function turn current_rotation: " + str(current_rotation))
 			else:
 				print("lower-right")
-				do_rotation(current_rotation + 90)
+				current_rotation += 90
+				do_rotation(current_rotation, Vector2(-8, -8))
+				sarc_dir = Vector2(-1,0)
+				#print("Function turn current_rotation: " + str(current_rotation))
 	else:
 		if raycast == player.get_node("down"):
 			# Player is pushing from the lower side
 			if offset.x > 0:
 				print("lower-right")
-				do_rotation(current_rotation + 90)
+				current_rotation += 90
+				do_rotation(current_rotation, Vector2(8, -8))
+				sarc_dir = Vector2(0,-1)
+				#print("Function turn current_rotation: " + str(current_rotation))
 			else:
 				print("upper-right")
-				do_rotation(current_rotation - 90)
+				current_rotation -= 90
+				do_rotation(current_rotation, Vector2(-8, -8))
+				sarc_dir = Vector2(0,1)
+				#print("Function turn current_rotation: " + str(current_rotation))
 		else:
 			# Player is pushing from the rihgt side
 			if offset.x > 0:
 				print("lower-left")
-				do_rotation(current_rotation - 90)
+				current_rotation -= 90
+				do_rotation(current_rotation, Vector2(8, 8))
+				sarc_dir = Vector2(0,1)
+				#print("Function turn current_rotation: " + str(current_rotation))
 			else:
 				print("upper-left")
-				do_rotation(current_rotation + 90)
+				current_rotation += 90
+				do_rotation(current_rotation, Vector2(-8, 8))
+				sarc_dir = Vector2(0,-1)
+				#print("Function turn current_rotation: " + str(current_rotation))
 
-
-var current_rotation: int = 0
-
-func do_rotation(current_rotation) -> void:
-	is_rotated = !is_rotated
-	dimentions = Vector2i(dimentions.y,dimentions.x)
+func do_rotation(current_rotation_param, tween_vector_offset) -> void:
 	var tween = create_tween()
-	tween.tween_property(self,"rotation_degrees", current_rotation, 0.185)
+	var final_destination = global_position - tween_vector_offset
+	tween.tween_property(self,"rotation_degrees", current_rotation_param, 0.185)
+	tween.tween_property(self,"position", final_destination, 0.185)
 	upright = not upright
-	print(upright)
-	print(current_rotation)
 	await tween.finished
 	tween.kill()
+	
