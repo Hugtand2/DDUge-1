@@ -21,9 +21,12 @@ func _ready() -> void:
 func push_block(dir: Vector2, raycast: RayCast2D):
 	if is_moving or not pushable:
 		return
-	
-	ray_cast_2d_lower.target_position = dir * tile_size
-	ray_cast_2d_upper.target_position = dir * tile_size
+	if upright:
+		ray_cast_2d_lower.target_position = dir * tile_size
+		ray_cast_2d_upper.target_position = dir * tile_size
+	else:
+		ray_cast_2d_upper.target_position = Vector2((dir.y), -(dir.x)) * tile_size
+		ray_cast_2d_lower.target_position = Vector2((dir.y), -(dir.x)) * tile_size
 	
 	ray_cast_2d_lower.force_raycast_update()
 	ray_cast_2d_upper.force_raycast_update()
