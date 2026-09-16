@@ -28,6 +28,9 @@ func push_block(dir: Vector2, raycast: RayCast2D):
 	ray_cast_2d_lower.force_raycast_update()
 	ray_cast_2d_upper.force_raycast_update()
 	
+	# Check if upright
+	if ray_cast_2d_lower.target_position.y == ray_cast_2d_upper.target_position.y:
+		upright = false
 	
 	# Moves only if you push from the top or bottom of the sarcophagus
 	if upright:
@@ -62,27 +65,13 @@ func push_and_rotate(raycast: RayCast2D) -> void:
 		if local_pos.y < 0:
 			print("upper-left")
 		else:
-			print("upper-right")
+			print("lower-left")
 	else:
 		# Player is pushing from the rihgt side
 		if local_pos.y < 0:
-			print("lower-left")
+			print("upper-right")
 		else:
 			print("lower-right")
-	#if raycast == player.get_node("right"):
-		#if raycast.target_position == ray_cast_2d_upper.target_position - Vector2(16, 0):
-			#print("Push from upperleft")
-			#return
-		#if raycast.target_position == ray_cast_2d_lower.target_position - Vector2(16, 0):
-			#print("Push from lowerleft")
-			#return
-	#else:
-		#if raycast.target_position == ray_cast_2d_upper.target_position - Vector2(16, 0):
-			#print("Push from upperright")
-			#return
-		#if raycast.target_position == ray_cast_2d_lower.target_position - Vector2(16, 0):
-			#print("Push from lowerright")
-			#return
 
 
 func do_rotation() -> void:
