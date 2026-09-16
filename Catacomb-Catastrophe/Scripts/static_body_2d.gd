@@ -73,57 +73,80 @@ func push_and_rotate(raycast: RayCast2D) -> void:
 			# Player is pushing from the left side
 			if offset.y < 0:
 				print("upper-left")
+				do_rotation(current_rotation + 90)
 			else:
 				print("lower-left")
+				do_rotation(current_rotation - 90)
 		else:
 			# Player is pushing from the rihgt side
 			if offset.y < 0:
 				print("upper-right")
+				do_rotation(current_rotation - 90)
 			else:
 				print("lower-right")
+				do_rotation(current_rotation + 90)
 	elif sarc_dir == Vector2(1, 0):
 		if raycast == player.get_node("up"):
 			# Player is pushing from the lower side
 			if offset.x < 0:
 				print("lower-right")
+				do_rotation(current_rotation + 90)
 			else:
 				print("upper-right")
+				do_rotation(current_rotation - 90)
 		else:
 			# Player is pushing from the rihgt side
 			if offset.x < 0:
 				print("lower-left")
+				do_rotation(current_rotation - 90)
 			else:
 				print("upper-left")
+				do_rotation(current_rotation + 90)
 	elif sarc_dir == Vector2(0, 1):
 		if raycast == player.get_node("left"):
 			# Player is pushing from the lower side
 			if offset.y > 0:
 				print("upper-left")
+				do_rotation(current_rotation + 90)
 			else:
 				print("lower-left")
+				do_rotation(current_rotation - 90)
 		else:
 			# Player is pushing from the rihgt side
 			if offset.y > 0:
 				print("upper-right")
+				do_rotation(current_rotation - 90)
 			else:
 				print("lower-right")
+				do_rotation(current_rotation + 90)
 	else:
 		if raycast == player.get_node("down"):
 			# Player is pushing from the lower side
 			if offset.x > 0:
 				print("lower-right")
+				do_rotation(current_rotation + 90)
 			else:
 				print("upper-right")
+				do_rotation(current_rotation - 90)
 		else:
 			# Player is pushing from the rihgt side
 			if offset.x > 0:
 				print("lower-left")
+				do_rotation(current_rotation - 90)
 			else:
 				print("upper-left")
+				do_rotation(current_rotation + 90)
 
 
-func do_rotation() -> void:
+var current_rotation: int = 0
+
+func do_rotation(current_rotation) -> void:
 	is_rotated = !is_rotated
 	dimentions = Vector2i(dimentions.y,dimentions.x)
 	var tween = create_tween()
-	tween.tween_property(self,"rotation_degrees", 90 if is_rotated else 0, 0.185)
+	tween.tween_property(self,"rotation_degrees", current_rotation, 0.185)
+	upright = not upright
+	print(upright)
+	print(current_rotation)
+	await tween.finished
+	tween.kill()
