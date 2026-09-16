@@ -5,7 +5,10 @@ const tile_size: Vector2 = Vector2(16, 16)
 var is_rotated: bool = false
 var is_moving: bool = false
 
-@export var upright: bool
+@export var sarc_dir: Vector2
+var upright: bool = true
+
+
 @export var pushable := true
 @export var maxPushes := -1
 @export var dimentions: Vector2i
@@ -15,18 +18,26 @@ var is_moving: bool = false
 @onready var ray_cast_2d_upper: RayCast2D = $Raycasts/RayCast2DUpper
 
 func _ready() -> void:
+	if sarc_dir == Vector2(1,0) or sarc_dir == Vector2(-1,0):
+		upright = false
 	ray_cast_2d_lower.enabled = pushable
 	ray_cast_2d_upper.enabled = pushable
 	
 func push_block(dir: Vector2, raycast: RayCast2D):
 	if is_moving or not pushable:
 		return
-	if upright:
+	if sarc_dir == Vector2(0,-1):
 		ray_cast_2d_lower.target_position = dir * tile_size
 		ray_cast_2d_upper.target_position = dir * tile_size
-	else:
+	elif sarc_dir == Vector2(1,0):
 		ray_cast_2d_upper.target_position = Vector2((dir.y), -(dir.x)) * tile_size
 		ray_cast_2d_lower.target_position = Vector2((dir.y), -(dir.x)) * tile_size
+	elif sarc_dir == Vector2(0,1):
+		ray_cast_2d_upper.target_position = -Vector2(dir.x, dir.y) * tile_size
+		ray_cast_2d_lower.target_position = -Vector2(dir.x, dir.y) * tile_size
+	else:
+		ray_cast_2d_upper.target_position = -Vector2((dir.y), -(dir.x)) * tile_size
+		ray_cast_2d_lower.target_position = -Vector2((dir.y), -(dir.x)) * tile_size
 	
 	ray_cast_2d_lower.force_raycast_update()
 	ray_cast_2d_upper.force_raycast_update()
@@ -57,7 +68,7 @@ func _move_animation(targetPosition):
 
 func push_and_rotate(raycast: RayCast2D) -> void:
 	var offset = player.global_position - global_position
-	if upright:
+	if sarc_dir == Vector2(0, -1):
 		if raycast == player.get_node("right"):
 			# Player is pushing from the left side
 			if offset.y < 0:
@@ -70,7 +81,7 @@ func push_and_rotate(raycast: RayCast2D) -> void:
 				print("upper-right")
 			else:
 				print("lower-right")
-	else:
+	elif sarc_dir == Vector2(1, 0):
 		if raycast == player.get_node("up"):
 			# Player is pushing from the lower side
 			if offset.x < 0:
@@ -80,6 +91,32 @@ func push_and_rotate(raycast: RayCast2D) -> void:
 		else:
 			# Player is pushing from the rihgt side
 			if offset.x < 0:
+				print("lower-left")
+			else:
+				print("upper-left")
+	elif sarc_dir == Vector2(0, 1):
+		if raycast == player.get_node("left"):
+			# Player is pushing from the lower side
+			if offset.y > 0:
+				print("upper-left")
+			else:
+				print("lower-left")
+		else:
+			# Player is pushing from the rihgt side
+			if offset.y > 0:
+				print("upper-right")
+			else:
+				print("lower-right")
+	else:
+		if raycast == player.get_node("down"):
+			# Player is pushing from the lower side
+			if offset.x > 0:
+				print("lower-right")
+			else:
+				print("upper-right")
+		else:
+			# Player is pushing from the rihgt side
+			if offset.x > 0:
 				print("lower-left")
 			else:
 				print("upper-left")

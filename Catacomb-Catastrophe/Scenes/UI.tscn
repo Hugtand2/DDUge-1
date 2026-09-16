@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bamc3cfxt4rls"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1416940851]
+[ext_resource type="Script" uid="uid://kpd1aia0ybj3" path="res://Scripts/ui.gd" id="1_w371h"]
 
-[node name="Retry Label" type="Label" parent="." unique_id=76204930]
+[node name="LevelViewportUI" type="CanvasLayer" unique_id=1416940851]
+script = ExtResource("1_w371h")
+
+[node name="RetryLabel" type="Label" parent="." unique_id=76204930]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -12,3 +15,15 @@ grow_vertical = 0
 offset_transform_enabled = true
 offset_transform_position = Vector2(15, -15)
 text = "Press R to retry"
+
+[node name="RetryButton" type="Button" parent="." unique_id=379734946]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Retry Level"
+
+[node name="NextLevelButton" type="Button" parent="." unique_id=1187007733]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Next Level"

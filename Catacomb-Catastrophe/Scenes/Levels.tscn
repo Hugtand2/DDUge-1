@@ -11,8 +11,3 @@ script = ExtResource("1_nf2x5")
 position = Vector2(16, 16)
 
 [node name="UI" parent="." unique_id=1009301396 instance=ExtResource("2_1d1di")]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_right = 0.0
-grow_horizontal = 1
-grow_vertical = 0

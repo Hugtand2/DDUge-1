@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="3_6b1hk"]
 [ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="5_080ts"]
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="5_t5ss4"]
+[ext_resource type="PackedScene" uid="uid://bbvuspyon8ci5" path="res://Scenes/exit.tscn" id="6_cvavm"]
+[ext_resource type="Script" uid="uid://cgk0l6ccb3iei" path="res://Scripts/exit.gd" id="7_vhmom"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
 texture = ExtResource("2_6ha17")
@@ -211,7 +213,7 @@ sources/0 = SubResource("TileSetAtlasSource_tocei")
 script = ExtResource("1_080ts")
 
 [node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=110184097]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAIAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_21xkr")
 
 [node name="WallsTileMapLayer" type="TileMapLayer" parent="." unique_id=1748003041]
@@ -223,12 +225,17 @@ position = Vector2(40, 56)
 
 [node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("5_t5ss4")]
 position = Vector2(32, 24)
-rotation = 1.5707964
+rotation = 4.712389
+sarc_dir = Vector2(-1, 0)
 maxPushes = 1
 player = NodePath("../CharacterBody2D")
+
+[node name="Exit" parent="." unique_id=659552782 instance=ExtResource("6_cvavm")]
+position = Vector2(88, 40)
+script = ExtResource("7_vhmom")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1847131771]
 position = Vector2(40, 40)
 zoom = Vector2(5, 5)
 
-[node name="CanvasLayer" parent="Camera2D" unique_id=1416940851 instance=ExtResource("5_080ts")]
+[node name="LevelViewportUI" parent="Camera2D" unique_id=1416940851 instance=ExtResource("5_080ts")]

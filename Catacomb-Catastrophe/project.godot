@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 SceneManager="*uid://j532kt76vvbi"
 MusicPlayer="*uid://bxqb1kyglx634"
 Levels="*uid://bouvgetwec3vb"
+Ui="*uid://bamc3cfxt4rls"
 
 [display]
 
@@ -30,6 +31,8 @@ window/stretch/aspect="expand"
 2d_physics/layer_1="BaseFloor"
 2d_physics/layer_2="Walls"
 2d_physics/layer_3="Player"
+2d_physics/layer_4="Sarcophagus"
+2d_physics/layer_5="Exit"
 
 [physics]
 

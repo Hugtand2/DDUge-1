@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bbvuspyon8ci5"]
+
+[ext_resource type="Texture2D" uid="uid://4nm0adow30pi" path="res://Resources/Sprites/Level_sprites/exit.png" id="1_35a55"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54cwd"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ega06"]
+size = Vector2(14, 14)
+
+[node name="Exit" type="StaticBody2D" unique_id=659552782]
+collision_layer = 16
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1256582418]
+shape = SubResource("RectangleShape2D_54cwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1391468463]
+texture = ExtResource("1_35a55")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1553796708]
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=738067386]
+shape = SubResource("RectangleShape2D_ega06")
