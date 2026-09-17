@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvc6qjdmhf1ii"
-path="res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"
+uid="uid://pft50vemwq40"
+path="res://.godot/imported/sandtilefloorspikegone.png-26cd05f34075afa18469f7ff12b449d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Level_sprites/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/sandtilefloorspikegone.png"
+dest_files=["res://.godot/imported/sandtilefloorspikegone.png-26cd05f34075afa18469f7ff12b449d7.ctex"]
 
 [params]
 

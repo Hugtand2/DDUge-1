@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvc6qjdmhf1ii"
-path="res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"
+uid="uid://br3hx83sq5wou"
+path="res://.godot/imported/Fat_guy.png-3d438174b1185c5b1f1d41448d0831ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Level_sprites/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"]
+source_file="res://Resources/Sprites/Character_sprites/Fat guy/Fat_guy.png"
+dest_files=["res://.godot/imported/Fat_guy.png-3d438174b1185c5b1f1d41448d0831ac.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvc6qjdmhf1ii"
-path="res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"
+uid="uid://b77kbqtuqn040"
+path="res://.godot/imported/catacombwall.png-70df9c426c63a689b231467e6910a9cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Level_sprites/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/catacombwall.png"
+dest_files=["res://.godot/imported/catacombwall.png-70df9c426c63a689b231467e6910a9cb.ctex"]
 
 [params]
 

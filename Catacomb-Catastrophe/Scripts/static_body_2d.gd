@@ -13,7 +13,7 @@ var upright: bool = true
 
 @onready var ray_cast_2d_lower: RayCast2D = $Raycasts/RayCast2DLower
 @onready var ray_cast_2d_upper: RayCast2D = $Raycasts/RayCast2DUpper
-@onready var current_rotation: int = 0
+@onready var current_rotation: int = int(rotation_degrees)
 
 func _ready() -> void:
 	if sarc_dir == Vector2(1,0) or sarc_dir == Vector2(-1,0):

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvc6qjdmhf1ii"
-path="res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"
+uid="uid://hjdcf01p2xr6"
+path="res://.godot/imported/sandtile.png-395bbf9df1b0ea8f8cc59710e09138fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Level_sprites/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/TileSets/sandtile.png"
+dest_files=["res://.godot/imported/sandtile.png-395bbf9df1b0ea8f8cc59710e09138fb.ctex"]
 
 [params]
 
