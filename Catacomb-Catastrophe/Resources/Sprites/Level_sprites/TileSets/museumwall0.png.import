@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Catacomb-Catastrophe/Resources/Sprites/Level_sprites/TileSets/museumwall0.png.import
-uid="uid://dqvptueobh2at"
+uid="uid://coo5cmc3dedyu"
 path="res://.godot/imported/museumwall0.png-b9060deb6ab88616dabe939dce10f675.ctex"
-========
-uid="uid://c8c336vqes2b4"
-path="res://.godot/imported/PlayButtonHover.png-4e1ba246eef0776da9afffe9067c3421.ctex"
->>>>>>>> 859bcb3e591bcd39d863f07b03ac2d427e4945dc:Catacomb-Catastrophe/Scenes/Resources/PlayButton/PlayButtonHover.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Catacomb-Catastrophe/Resources/Sprites/Level_sprites/TileSets/museumwall0.png.import
 source_file="res://Resources/Sprites/Level_sprites/TileSets/museumwall0.png"
 dest_files=["res://.godot/imported/museumwall0.png-b9060deb6ab88616dabe939dce10f675.ctex"]
-========
-source_file="res://Scenes/Resources/PlayButton/PlayButtonHover.png"
-dest_files=["res://.godot/imported/PlayButtonHover.png-4e1ba246eef0776da9afffe9067c3421.ctex"]
->>>>>>>> 859bcb3e591bcd39d863f07b03ac2d427e4945dc:Catacomb-Catastrophe/Scenes/Resources/PlayButton/PlayButtonHover.png.import
 
 [params]
 
