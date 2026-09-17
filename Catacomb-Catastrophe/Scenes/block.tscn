@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ch2sfpf500l24"]
+
+[ext_resource type="Script" uid="uid://c2uamxigce4lm" path="res://Scripts/block.gd" id="1_4axq1"]
+[ext_resource type="Texture2D" uid="uid://civbl33f6ft3j" path="res://Resources/icon.svg" id="2_3ohxg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnpof"]
+size = Vector2(12, 12)
+
+[node name="Block" type="StaticBody2D" unique_id=302563434]
+script = ExtResource("1_4axq1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=968495960]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_3ohxg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1902411433]
+shape = SubResource("RectangleShape2D_qnpof")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1728742144]
+target_position = Vector2(0, 8)
+collision_mask = 30
