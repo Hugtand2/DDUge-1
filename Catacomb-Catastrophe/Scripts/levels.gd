@@ -26,3 +26,10 @@ func level_clear() -> void:
 func reset_level() -> void:
 	SceneManager.change_scene(get_tree().current_scene.scene_file_path)
 	pass
+
+#kills the player
+func kill() -> void:
+	# play death animation
+	# play death sound
+	SceneManager.change_scene(get_tree().current_scene.scene_file_path)
+	pass
