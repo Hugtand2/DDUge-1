@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bbvuspyon8ci5"]
 
-[ext_resource type="Texture2D" uid="uid://4nm0adow30pi" path="res://Resources/Sprites/Level_sprites/exit.png" id="1_35a55"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_54cwd"]
 size = Vector2(16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xsbdy"]
+load_path = "res://.godot/imported/exit.png-6cf827a893fa6bc595f71d6f8ea89052.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ega06"]
 size = Vector2(14, 14)
@@ -16,7 +17,7 @@ collision_mask = 4
 shape = SubResource("RectangleShape2D_54cwd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1391468463]
-texture = ExtResource("1_35a55")
+texture = SubResource("CompressedTexture2D_xsbdy")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1553796708]
 collision_mask = 8

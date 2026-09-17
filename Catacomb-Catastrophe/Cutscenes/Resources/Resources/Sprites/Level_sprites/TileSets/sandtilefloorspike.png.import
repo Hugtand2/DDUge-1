@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5ugobnentnln"
-path="res://.godot/imported/Sprite-0027.png-19a52c884c4d2b6dbb8eb1aa4d0ec23a.ctex"
+uid="uid://b83lrbpw38ykp"
+path="res://.godot/imported/sandtilefloorspike.png-30725f360fe5387f4b63b88a2a7eed54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprite-0027.png"
-dest_files=["res://.godot/imported/Sprite-0027.png-19a52c884c4d2b6dbb8eb1aa4d0ec23a.ctex"]
+source_file="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/TileSets/sandtilefloorspike.png"
+dest_files=["res://.godot/imported/sandtilefloorspike.png-30725f360fe5387f4b63b88a2a7eed54.ctex"]
 
 [params]
 
