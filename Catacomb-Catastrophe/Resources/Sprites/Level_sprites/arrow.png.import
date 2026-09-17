@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cftwc3kcq5xbx"
-path="res://.godot/imported/movableblock.png-243a7f04756a62e0ba81c3e5517ab7a5.ctex"
+uid="uid://bvc6qjdmhf1ii"
+path="res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/movableblock.png"
-dest_files=["res://.godot/imported/movableblock.png-243a7f04756a62e0ba81c3e5517ab7a5.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"]
 
 [params]
 

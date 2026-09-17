@@ -62,7 +62,7 @@ func _move_animation(targetPosition):
 	is_moving = true
 	var tween = get_tree().create_tween()
 	tween.tween_property(self,"global_position", targetPosition, 0.185).set_trans(Tween.TRANS_SINE)
-	tween.finished.connect(func(): is_moving = false)
+	tween.finished.connect(func(): is_moving = true)
 
 func push_and_rotate(raycast: RayCast2D) -> void:
 	#print("Function start current_rotation: " + str(current_rotation))
