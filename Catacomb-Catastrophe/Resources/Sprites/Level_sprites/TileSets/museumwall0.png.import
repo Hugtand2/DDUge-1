@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yq23lcnbl3bl"
-path="res://.godot/imported/Long_guy.png-79f617d143b7331b488d2071e553e330.ctex"
+uid="uid://dqvptueobh2at"
+path="res://.godot/imported/museumwall0.png-b9060deb6ab88616dabe939dce10f675.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Character_sprites/Long guy/Long_guy.png"
-dest_files=["res://.godot/imported/Long_guy.png-79f617d143b7331b488d2071e553e330.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/TileSets/museumwall0.png"
+dest_files=["res://.godot/imported/museumwall0.png-b9060deb6ab88616dabe939dce10f675.ctex"]
 
 [params]
 

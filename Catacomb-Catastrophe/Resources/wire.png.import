@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yq23lcnbl3bl"
-path="res://.godot/imported/Long_guy.png-79f617d143b7331b488d2071e553e330.ctex"
+uid="uid://d4lhajvk7snyi"
+path="res://.godot/imported/wire.png-4179edaff3197ec4b8e0d2af363ae3e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Character_sprites/Long guy/Long_guy.png"
-dest_files=["res://.godot/imported/Long_guy.png-79f617d143b7331b488d2071e553e330.ctex"]
+source_file="res://Resources/wire.png"
+dest_files=["res://.godot/imported/wire.png-4179edaff3197ec4b8e0d2af363ae3e3.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yq23lcnbl3bl"
-path="res://.godot/imported/Long_guy.png-79f617d143b7331b488d2071e553e330.ctex"
+uid="uid://btu3aqnsvh4dm"
+path="res://.godot/imported/catacombtorch.png-20f890d06ee6139dd90a3c4ad4b7d892.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Character_sprites/Long guy/Long_guy.png"
-dest_files=["res://.godot/imported/Long_guy.png-79f617d143b7331b488d2071e553e330.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/TileSets/catacombtorch.png"
+dest_files=["res://.godot/imported/catacombtorch.png-20f890d06ee6139dd90a3c4ad4b7d892.ctex"]
 
 [params]
 
