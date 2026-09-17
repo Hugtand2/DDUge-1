@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Catacomb-Catastrophe/Scenes/Resources/Sprite-0027.png.import
-uid="uid://d76b0o8unbw8"
+uid="uid://cip3a4djx7tl"
 path="res://.godot/imported/Sprite-0027.png-36e7baad18ed350713ab572e7a41b1af.ctex"
-========
-uid="uid://dniyqjcuufnjy"
-path="res://.godot/imported/pixelbackground.png-79f2ad9991ffd66d047cc47bd73b04d8.ctex"
->>>>>>>> 7959ae7c887fb000af534992b168d167f0d6bcb1:Catacomb-Catastrophe/Resources/pixelbackground.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Catacomb-Catastrophe/Scenes/Resources/Sprite-0027.png.import
 source_file="res://Scenes/Resources/Sprite-0027.png"
 dest_files=["res://.godot/imported/Sprite-0027.png-36e7baad18ed350713ab572e7a41b1af.ctex"]
-========
-source_file="res://Resources/pixelbackground.png"
-dest_files=["res://.godot/imported/pixelbackground.png-79f2ad9991ffd66d047cc47bd73b04d8.ctex"]
->>>>>>>> 7959ae7c887fb000af534992b168d167f0d6bcb1:Catacomb-Catastrophe/Resources/pixelbackground.png.import
 
 [params]
 
