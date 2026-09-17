@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="5_t5ss4"]
 [ext_resource type="PackedScene" uid="uid://bbvuspyon8ci5" path="res://Scenes/exit.tscn" id="6_cvavm"]
 [ext_resource type="Script" uid="uid://cgk0l6ccb3iei" path="res://Scripts/exit.gd" id="7_vhmom"]
+[ext_resource type="PackedScene" uid="uid://ch2sfpf500l24" path="res://Scenes/block.tscn" id="9_86mp4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
 texture = ExtResource("2_6ha17")
@@ -225,7 +226,6 @@ position = Vector2(40, 56)
 
 [node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("5_t5ss4")]
 position = Vector2(40, 32)
-sarc_dir = Vector2(0, -1)
 maxPushes = 1
 player = NodePath("../CharacterBody2D")
 
@@ -238,3 +238,7 @@ position = Vector2(40, 40)
 zoom = Vector2(5, 5)
 
 [node name="LevelViewportUI" parent="Camera2D" unique_id=1416940851 instance=ExtResource("5_080ts")]
+
+[node name="Block" parent="." unique_id=302563434 instance=ExtResource("9_86mp4")]
+position = Vector2(24, 40)
+maxPushes = 1
