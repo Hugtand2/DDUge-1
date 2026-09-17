@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 func level_clear() -> void:
 	$RetryButton.show()
 	$NextLevelButton.show()
+	print("Level Clear")
 	pass
 
 # Called upon user input

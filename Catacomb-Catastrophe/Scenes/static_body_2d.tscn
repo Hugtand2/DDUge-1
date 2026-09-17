@@ -10,6 +10,7 @@ size = Vector2(16, 32)
 collision_layer = 8
 collision_mask = 4
 script = ExtResource("1_ypqmy")
+sarc_dir = Vector2(0, -1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=332572058]
 texture = ExtResource("2_dyby8")

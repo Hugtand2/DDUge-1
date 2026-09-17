@@ -10,6 +10,6 @@ func _on_body_entered() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	for body in $Area2D.get_overlapping_bodies():
-		if body.is_in_group("sarcophagus"):
+		if body.is_in_group():
 			Levels.level_clear()
 	pass
