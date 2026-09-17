@@ -5,7 +5,11 @@ extends Node2D
 func _ready() -> void:
 	Levels.setup()
 	$Camera2D/LevelViewportUI/RetryLabel.show()
+<<<<<<< Updated upstream
 	$Camera2D/LevelViewportUI/ArrowkeyLabel.show()
+=======
+	$Camera2D/LevelViewportUI/ArrowKeyLabel.show()
+>>>>>>> Stashed changes
 	pass # Replace with function body.
 
 func remove(button: Button) -> void:
