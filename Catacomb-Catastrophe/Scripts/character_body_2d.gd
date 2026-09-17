@@ -3,8 +3,12 @@ extends CharacterBody2D
 const tile_size: Vector2 = Vector2(16, 16)
 var sprite_node_pos_tween: Tween
 
+func _ready() -> void:
+	$HurtBox.body_entered.connect(_on_body_entered)
 
-
+func _on_body_entered(body: Node2D) -> void:
+	if body is TileMapLayer and body.name == "SpikesTileMapLayer":
+		kill()
 
 func _physics_process(delta: float) -> void:
 	if !sprite_node_pos_tween or !sprite_node_pos_tween.is_running():
@@ -40,3 +44,7 @@ func _process(delta: float) -> void:
 	# Checks if "r" is pressed
 	if Input.is_key_pressed(KEY_R):
 		Levels.reset_level()
+
+func kill() -> void:
+	print("Killed")
+	return

@@ -1,18 +1,17 @@
 [gd_scene format=4 uid="uid://dgsadhp1rx5e6"]
 
 [ext_resource type="Script" uid="uid://c44ta4tmgcvs6" path="res://Scripts/level_one.gd" id="1_080ts"]
-[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="2_6b1hk"]
-[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_6ha17"]
-[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Resources/Sprites/Level_sprites/sandtile.png" id="3_0ieg5"]
+[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Scenes/Resources/Resources/Floors&More/Wall.png" id="2_6b1hk"]
+[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Scenes/Resources/Resources/Floors&More/Floor.png" id="2_6ha17"]
+[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="3_0ieg5"]
 [ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="3_6b1hk"]
-[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Resources/Sprites/Level_sprites/catacombwall.png" id="4_86mp4"]
+[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="4_86mp4"]
 [ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="4_xohb6"]
 [ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="5_080ts"]
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="5_t5ss4"]
 [ext_resource type="PackedScene" uid="uid://bbvuspyon8ci5" path="res://Scenes/exit.tscn" id="6_cvavm"]
-[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Resources/Sprites/Level_sprites/catacombtorch.png" id="6_xohb6"]
+[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_xohb6"]
 [ext_resource type="Script" uid="uid://cgk0l6ccb3iei" path="res://Scripts/exit.gd" id="7_vhmom"]
-[ext_resource type="PackedScene" uid="uid://ch2sfpf500l24" path="res://Scenes/block.tscn" id="13_4maxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
 texture = ExtResource("2_6ha17")
@@ -250,10 +249,9 @@ tile_set = SubResource("TileSet_yyq1l")
 [node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("3_6b1hk")]
 position = Vector2(40, 56)
 
-[node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("5_t5ss4")]
+[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("5_t5ss4")]
 position = Vector2(40, 16)
 maxPushes = 1
-player = NodePath("../CharacterBody2D")
 
 [node name="Exit" parent="." unique_id=659552782 instance=ExtResource("6_cvavm")]
 position = Vector2(88, 40)
@@ -264,6 +262,3 @@ position = Vector2(40, 40)
 zoom = Vector2(5, 5)
 
 [node name="LevelViewportUI" parent="Camera2D" unique_id=1416940851 instance=ExtResource("5_080ts")]
-
-[node name="Block" parent="." unique_id=302563434 instance=ExtResource("13_4maxe")]
-position = Vector2(24, 40)
