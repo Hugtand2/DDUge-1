@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Catacomb-Catastrophe/Resources/Sprites/Level_sprites/TileSets/exit.png.import
-uid="uid://dng0kf3egnxw5"
+uid="uid://d2650vtbfqp2h"
 path="res://.godot/imported/exit.png-5ec0d7a415b25b03eaa652709725089d.ctex"
-========
-uid="uid://d4lhajvk7snyi"
-path="res://.godot/imported/wire.png-a5b9d0febd3851b91cb0ad4ea5b686c3.ctex"
->>>>>>>> 859bcb3e591bcd39d863f07b03ac2d427e4945dc:Catacomb-Catastrophe/Resources/Sprites/Level_sprites/wire.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Catacomb-Catastrophe/Resources/Sprites/Level_sprites/TileSets/exit.png.import
 source_file="res://Resources/Sprites/Level_sprites/TileSets/exit.png"
 dest_files=["res://.godot/imported/exit.png-5ec0d7a415b25b03eaa652709725089d.ctex"]
-========
-source_file="res://Resources/Sprites/Level_sprites/wire.png"
-dest_files=["res://.godot/imported/wire.png-a5b9d0febd3851b91cb0ad4ea5b686c3.ctex"]
->>>>>>>> 859bcb3e591bcd39d863f07b03ac2d427e4945dc:Catacomb-Catastrophe/Resources/Sprites/Level_sprites/wire.png.import
 
 [params]
 

@@ -33,6 +33,8 @@ window/stretch/aspect="expand"
 2d_physics/layer_3="Player"
 2d_physics/layer_4="Sarcophagus"
 2d_physics/layer_5="Exit"
+2d_physics/layer_6="Block"
+2d_physics/layer_7="Hazards"
 
 [physics]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coo5cmc3dedyu"
-path="res://.godot/imported/museumwall0.png-b9060deb6ab88616dabe939dce10f675.ctex"
+uid="uid://cxodd1iferjvs"
+path="res://.godot/imported/black.png-eded048a95e0ffa65c39522ad36c3129.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Level_sprites/TileSets/museumwall0.png"
-dest_files=["res://.godot/imported/museumwall0.png-b9060deb6ab88616dabe939dce10f675.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/black.png"
+dest_files=["res://.godot/imported/black.png-eded048a95e0ffa65c39522ad36c3129.ctex"]
 
 [params]
 

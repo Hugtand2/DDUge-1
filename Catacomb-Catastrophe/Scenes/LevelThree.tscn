@@ -1,20 +1,21 @@
-[gd_scene format=4 uid="uid://dgsadhp1rx5e6"]
+[gd_scene format=4 uid="uid://ilwrjmu0tcbi"]
 
-[ext_resource type="Script" uid="uid://c44ta4tmgcvs6" path="res://Scripts/level_one.gd" id="1_080ts"]
-[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Scenes/Resources/Resources/Floors&More/Wall.png" id="2_6b1hk"]
-[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Scenes/Resources/Resources/Floors&More/Floor.png" id="2_6ha17"]
-[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="3_0ieg5"]
-[ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="3_6b1hk"]
-[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="4_86mp4"]
-[ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="4_xohb6"]
-[ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="5_080ts"]
-[ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="5_t5ss4"]
-[ext_resource type="PackedScene" uid="uid://bbvuspyon8ci5" path="res://Scenes/exit.tscn" id="6_cvavm"]
-[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_xohb6"]
-[ext_resource type="Script" uid="uid://cgk0l6ccb3iei" path="res://Scripts/exit.gd" id="7_vhmom"]
+[ext_resource type="Script" uid="uid://otqc6n2sbbce" path="res://Scripts/level_three.gd" id="1_bp74k"]
+[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Scenes/Resources/Resources/Floors&More/Floor.png" id="1_gp1ty"]
+[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="2_3d5vm"]
+[ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="3_bp74k"]
+[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Scenes/Resources/Resources/Floors&More/Wall.png" id="4_t72qd"]
+[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="5_3tbe4"]
+[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_kvnfv"]
+[ext_resource type="Texture2D" uid="uid://p3vggnbn312b" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtilefloorspike.png" id="7_3d5vm"]
+[ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="7_5r1ej"]
+[ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="8_h2835"]
+[ext_resource type="PackedScene" uid="uid://bbvuspyon8ci5" path="res://Scenes/exit.tscn" id="9_x2dqe"]
+[ext_resource type="Script" uid="uid://cgk0l6ccb3iei" path="res://Scripts/exit.gd" id="10_hqkmk"]
+[ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="11_kuij6"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
-texture = ExtResource("2_6ha17")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0k3p"]
+texture = ExtResource("1_gp1ty")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -40,23 +41,23 @@ texture = ExtResource("2_6ha17")
 6:2/0 = 0
 7:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4maxe"]
-texture = ExtResource("3_0ieg5")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ph7fr"]
+texture = ExtResource("2_3d5vm")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smku1"]
-texture = ExtResource("4_xohb6")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vx84i"]
+texture = ExtResource("3_bp74k")
 0:0/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_21xkr"]
+[sub_resource type="TileSet" id="TileSet_54nda"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_6b1hk")
-sources/1 = SubResource("TileSetAtlasSource_4maxe")
-sources/2 = SubResource("TileSetAtlasSource_smku1")
+sources/0 = SubResource("TileSetAtlasSource_k0k3p")
+sources/1 = SubResource("TileSetAtlasSource_ph7fr")
+sources/2 = SubResource("TileSetAtlasSource_vx84i")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tocei"]
-texture = ExtResource("2_6b1hk")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0ahv"]
+texture = ExtResource("4_t72qd")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -218,47 +219,62 @@ texture = ExtResource("2_6b1hk")
 15:4/0 = 0
 15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufbp1"]
-texture = ExtResource("4_86mp4")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdvbq"]
+texture = ExtResource("5_3tbe4")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xk6s3"]
-texture = ExtResource("6_xohb6")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gfu15"]
+texture = ExtResource("6_kvnfv")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_yyq1l"]
+[sub_resource type="TileSet" id="TileSet_2n62w"]
 physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 4
-sources/0 = SubResource("TileSetAtlasSource_tocei")
-sources/1 = SubResource("TileSetAtlasSource_ufbp1")
-sources/2 = SubResource("TileSetAtlasSource_xk6s3")
+sources/0 = SubResource("TileSetAtlasSource_q0ahv")
+sources/1 = SubResource("TileSetAtlasSource_hdvbq")
+sources/2 = SubResource("TileSetAtlasSource_gfu15")
 
-[node name="LevelOne" type="Node2D" unique_id=673032643]
-script = ExtResource("1_080ts")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bp74k"]
+texture = ExtResource("7_3d5vm")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=110184097]
-tile_map_data = PackedByteArray("AAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAMAAQAAAAAAAAADAAMAAQAAAAAAAAACAAMAAQAAAAAAAAABAAMAAQAAAAAAAAABAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAIAAQAAAAAAAAACAAIAAQAAAAAAAAADAAIAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAEAAQAAAAAAAAADAAEAAQAAAAAAAAABAAEAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAAAAAADAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAD+/wUAAgAAAAAAAAD+/wQAAgAAAAAAAAD+/wMAAgAAAAAAAAD+/wIAAgAAAAAAAAD+/wEAAgAAAAAAAAD+/wAAAgAAAAAAAAD+////AgAAAAAAAAD+//7/AgAAAAAAAAD9//7/AgAAAAAAAAD8//7/AgAAAAAAAAD7//7/AgAAAAAAAAD7////AgAAAAAAAAD7/wAAAgAAAAAAAAD7/wEAAgAAAAAAAAD7/wIAAgAAAAAAAAD7/wMAAgAAAAAAAAD7/wQAAgAAAAAAAAD7/wUAAgAAAAAAAAD7/wYAAgAAAAAAAAD8/wYAAgAAAAAAAAD9/wYAAgAAAAAAAAD+/wYAAgAAAAAAAAD9/wUAAgAAAAAAAAD8/wUAAgAAAAAAAAD8/wQAAgAAAAAAAAD9/wQAAgAAAAAAAAD9/wMAAgAAAAAAAAD8/wMAAgAAAAAAAAD8/wIAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wAAAgAAAAAAAAD8////AgAAAAAAAAD9////AgAAAAAAAAD9/wAAAgAAAAAAAAD9/wEAAgAAAAAAAAD9/wIAAgAAAAAAAAD///7/AgAAAAAAAAAAAP7/AgAAAAAAAAABAP7/AgAAAAAAAAACAP7/AgAAAAAAAAADAP7/AgAAAAAAAAAEAP7/AgAAAAAAAAAFAP7/AgAAAAAAAAAGAP7/AgAAAAAAAAAGAP//AgAAAAAAAAAGAAAAAgAAAAAAAAAGAAEAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAMAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAEAAYAAgAAAAAAAAADAAYAAgAAAAAAAAACAAYAAgAAAAAAAAABAAYAAgAAAAAAAAAAAAYAAgAAAAAAAAD//wYAAgAAAAAAAAAHAAYAAgAAAAAAAAAIAAYAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAIAAgAAAAAAAAAHAAEAAgAAAAAAAAAHAAAAAgAAAAAAAAAHAP//AgAAAAAAAAAIAP7/AgAAAAAAAAAJAP7/AgAAAAAAAAAJAP//AgAAAAAAAAAJAAAAAgAAAAAAAAAJAAEAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAJAAQAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAEAAgAAAAAAAAAIAAAAAgAAAAAAAAAIAP//AgAAAAAAAAAHAP7/AgAAAAAAAAACAAEAAQAAAAAAAAA=")
-tile_set = SubResource("TileSet_21xkr")
+[sub_resource type="TileSet" id="TileSet_54cwd"]
+physics_layer_0/collision_layer = 64
+physics_layer_0/collision_mask = 4
+sources/0 = SubResource("TileSetAtlasSource_bp74k")
 
-[node name="WallsTileMapLayer" type="TileMapLayer" parent="." unique_id=1748003041]
-tile_map_data = PackedByteArray("AAD//wUAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAP//AAAAAAAAAAD/////AAAAAAAAAAAAAP//AQAAAAAAAAACAP//AQAAAAAAAAAEAP//AQAAAAAAAAAFAAAAAQAAAAAAAAAFAAEAAQAAAAAAAAAFAAMAAQAAAAAAAAAFAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAADAAUAAQAAAAAAAAACAAUAAQAAAAAAAAABAAUAAQAAAAAAAAAAAAUAAQAAAAAAAAD//wQAAQAAAAAAAAD//wMAAQAAAAAAAAD//wIAAQAAAAAAAAD//wEAAQAAAAAAAAD//wAAAQAAAAAAAAABAP//AgAAAAAAAAADAP//AgAAAAAAAAA=")
-tile_set = SubResource("TileSet_yyq1l")
+[node name="LevelThree" type="Node2D" unique_id=1360485741]
+script = ExtResource("1_bp74k")
 
-[node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("3_6b1hk")]
-position = Vector2(40, 56)
+[node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=485640007]
+tile_map_data = PackedByteArray("AAADAAMAAQAAAAAAAAACAAMAAQAAAAAAAAABAAMAAQAAAAAAAAABAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAIAAQAAAAAAAAACAAEAAQAAAAAAAAABAAEAAQAAAAAAAAAAAAEAAQAAAAAAAAADAAAAAQAAAAAAAAD+/wUAAgAAAAAAAAD9//7/AgAAAAAAAAD8//7/AgAAAAAAAAD7//7/AgAAAAAAAAD7////AgAAAAAAAAD7/wAAAgAAAAAAAAD7/wEAAgAAAAAAAAD7/wIAAgAAAAAAAAD7/wMAAgAAAAAAAAD7/wQAAgAAAAAAAAD7/wUAAgAAAAAAAAD7/wYAAgAAAAAAAAD8/wYAAgAAAAAAAAD9/wYAAgAAAAAAAAD+/wYAAgAAAAAAAAD9/wUAAgAAAAAAAAD8/wUAAgAAAAAAAAD8/wQAAgAAAAAAAAD9/wQAAgAAAAAAAAD9/wMAAgAAAAAAAAD8/wMAAgAAAAAAAAD8/wIAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wAAAgAAAAAAAAD8////AgAAAAAAAAD9////AgAAAAAAAAD9/wAAAgAAAAAAAAD9/wEAAgAAAAAAAAD9/wIAAgAAAAAAAAAFAP7/AgAAAAAAAAAGAP7/AgAAAAAAAAAGAP//AgAAAAAAAAAGAAAAAgAAAAAAAAAGAAEAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAMAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAEAAYAAgAAAAAAAAADAAYAAgAAAAAAAAACAAYAAgAAAAAAAAABAAYAAgAAAAAAAAAAAAYAAgAAAAAAAAD//wYAAgAAAAAAAAAHAAYAAgAAAAAAAAAIAAYAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAIAAgAAAAAAAAAHAAEAAgAAAAAAAAAHAAAAAgAAAAAAAAAHAP//AgAAAAAAAAAIAP7/AgAAAAAAAAAJAP7/AgAAAAAAAAAJAP//AgAAAAAAAAAJAAAAAgAAAAAAAAAJAAEAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAJAAQAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAEAAgAAAAAAAAAIAAAAAgAAAAAAAAAIAP//AgAAAAAAAAAHAP7/AgAAAAAAAAADAAIAAQAAAAAAAAADAAEAAQAAAAAAAAD//wUAAgAAAAAAAAAAAAUAAgAAAAAAAAABAAUAAgAAAAAAAAACAAUAAgAAAAAAAAADAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAMAAgAAAAAAAAAFAAIAAgAAAAAAAAAFAAEAAgAAAAAAAAAFAAAAAgAAAAAAAAAFAP//AgAAAAAAAAD+//7/AgAAAAAAAAD///7/AgAAAAAAAAAAAP7/AgAAAAAAAAABAP7/AgAAAAAAAAACAP7/AgAAAAAAAAADAP7/AgAAAAAAAAAEAP7/AgAAAAAAAAAAAAAAAQAAAAAAAAD+/wQAAgAAAAAAAAD+/wMAAgAAAAAAAAD+/wIAAgAAAAAAAAD+/wEAAgAAAAAAAAD+/wAAAgAAAAAAAAD+////AgAAAAAAAAACAAAAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_54nda")
 
-[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("5_t5ss4")]
+[node name="WallsTileMapLayer" type="TileMapLayer" parent="." unique_id=1169626757]
+tile_map_data = PackedByteArray("AAAEAAAAAQAAAAAAAAAEAAEAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAQAAAAAAAAAAAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAAAP//AQAAAAAAAAABAP//AgAAAAAAAAACAP//AgAAAAAAAAADAP//AQAAAAAAAAAEAP//AAAAAAAAAAD/////AAAAAAAAAAD//wAAAQAAAAAAAAD//wEAAQAAAAAAAAD//wIAAQAAAAAAAAD//wMAAQAAAAAAAAD//wQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_2n62w")
+
+[node name="SpikesTileMapLayer" type="TileMapLayer" parent="." unique_id=1948704370]
+tile_map_data = PackedByteArray("AAACAAIAAAAAAAAAAAABAAAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_54cwd")
+
+[node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("7_5r1ej")]
+position = Vector2(8, 56)
+collision_mask = 75
+
+[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("8_h2835")]
 position = Vector2(40, 16)
 maxPushes = 1
 
-[node name="Exit" parent="." unique_id=659552782 instance=ExtResource("6_cvavm")]
-position = Vector2(88, 40)
-script = ExtResource("7_vhmom")
+[node name="Exit" parent="." unique_id=659552782 instance=ExtResource("9_x2dqe")]
+position = Vector2(72, 56)
+script = ExtResource("10_hqkmk")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1847131771]
-position = Vector2(40, 40)
-zoom = Vector2(5, 5)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=978408697]
+position = Vector2(32, 32)
+zoom = Vector2(6, 6)
 
-[node name="LevelViewportUI" parent="Camera2D" unique_id=1416940851 instance=ExtResource("5_080ts")]
+[node name="LevelViewportUI" parent="Camera2D" unique_id=1416940851 instance=ExtResource("11_kuij6")]
