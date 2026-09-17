@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvc6qjdmhf1ii"
-path="res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"
+uid="uid://c5ugobnentnln"
+path="res://.godot/imported/Sprite-0027.png-19a52c884c4d2b6dbb8eb1aa4d0ec23a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Level_sprites/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"]
+source_file="res://Resources/Sprite-0027.png"
+dest_files=["res://.godot/imported/Sprite-0027.png-19a52c884c4d2b6dbb8eb1aa4d0ec23a.ctex"]
 
 [params]
 

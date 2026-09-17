@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvc6qjdmhf1ii"
-path="res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"
+uid="uid://xmelqfiyo3e"
+path="res://.godot/imported/floorspike.png-ff5e63fe9c2028ab107498e4bfa6ca39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Level_sprites/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/TileSets/floorspike.png"
+dest_files=["res://.godot/imported/floorspike.png-ff5e63fe9c2028ab107498e4bfa6ca39.ctex"]
 
 [params]
 

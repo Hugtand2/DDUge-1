@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvc6qjdmhf1ii"
-path="res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"
+uid="uid://d2ihthu4kbwc7"
+path="res://.godot/imported/wirebend.png-67853d64f46f160f44f210fb46222ae4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Level_sprites/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-707e1f76bb815a6d2d077ced59cde277.ctex"]
+source_file="res://Resources/Sprites/Level_sprites/wirebend.png"
+dest_files=["res://.godot/imported/wirebend.png-67853d64f46f160f44f210fb46222ae4.ctex"]
 
 [params]
 
