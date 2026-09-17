@@ -249,10 +249,11 @@ tile_set = SubResource("TileSet_rnwly")
 [node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("7_2fd3g")]
 position = Vector2(40, 72)
 
-[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("8_0dbye")]
+[node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("8_0dbye")]
 position = Vector2(32, 56)
 rotation = -1.5707964
 sarc_dir = Vector2(-1, 0)
+player = NodePath("../CharacterBody2D")
 
 [node name="Exit" parent="." unique_id=659552782 instance=ExtResource("9_1dyat")]
 position = Vector2(88, -40)
