@@ -162,9 +162,7 @@ shape = SubResource("RectangleShape2D_54cwd")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1695016832]
 position = Vector2(-7.1525574e-07, -1.3113022e-06)
 sprite_frames = SubResource("SpriteFrames_rpqav")
-animation = &"death"
-frame = 7
-frame_progress = 1.0
+animation = &"push"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1153557629]
 shape = SubResource("RectangleShape2D_qnpof")
