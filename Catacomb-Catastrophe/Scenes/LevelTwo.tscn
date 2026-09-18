@@ -1,20 +1,18 @@
 [gd_scene format=4 uid="uid://db5w74ba2wrkr"]
 
-[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Cutscenes/Resources/Resources/Floors&More/Floor.png" id="1_kiuv6"]
 [ext_resource type="Script" uid="uid://d4joxooohnxmo" path="res://Scripts/level_two.gd" id="1_quslx"]
-[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="2_quslx"]
 [ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="3_81ygx"]
-[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Cutscenes/Resources/Resources/Floors&More/Wall.png" id="4_6qas5"]
-[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="5_p1hsm"]
-[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_reloh"]
 [ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="7_2fd3g"]
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="8_0dbye"]
 [ext_resource type="PackedScene" uid="uid://bbvuspyon8ci5" path="res://Scenes/exit.tscn" id="9_1dyat"]
 [ext_resource type="Script" uid="uid://cgk0l6ccb3iei" path="res://Scripts/exit.gd" id="10_v8xcu"]
 [ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="11_y7wce"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7nf6k"]
+load_path = "res://.godot/imported/Floor.png-1f663b2b4ac8a055cd21bd78bf666b4a.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pdal"]
-texture = ExtResource("1_kiuv6")
+texture = SubResource("CompressedTexture2D_7nf6k")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -40,8 +38,11 @@ texture = ExtResource("1_kiuv6")
 6:2/0 = 0
 7:2/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u0y3c"]
+load_path = "res://.godot/imported/sandtile.png-1d62645052ef11c349c0fdef612e9a7f.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7v3na"]
-texture = ExtResource("2_quslx")
+texture = SubResource("CompressedTexture2D_u0y3c")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fmijr"]
@@ -55,8 +56,11 @@ sources/0 = SubResource("TileSetAtlasSource_1pdal")
 sources/1 = SubResource("TileSetAtlasSource_7v3na")
 sources/2 = SubResource("TileSetAtlasSource_fmijr")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hiq3k"]
+load_path = "res://.godot/imported/Wall.png-1d5ed46f0964444610400a157148790c.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lwlu"]
-texture = ExtResource("4_6qas5")
+texture = SubResource("CompressedTexture2D_hiq3k")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -218,13 +222,19 @@ texture = ExtResource("4_6qas5")
 15:4/0 = 0
 15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mbvoe"]
+load_path = "res://.godot/imported/catacombwall.png-82898ff932b796b486a4c75db2b0070c.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eromk"]
-texture = ExtResource("5_p1hsm")
+texture = SubResource("CompressedTexture2D_mbvoe")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kiuv6"]
+load_path = "res://.godot/imported/catacombtorch.png-76e0e530f234362a1b911fb9c3235023.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8yb3k"]
-texture = ExtResource("6_reloh")
+texture = SubResource("CompressedTexture2D_kiuv6")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -249,11 +259,10 @@ tile_set = SubResource("TileSet_rnwly")
 [node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("7_2fd3g")]
 position = Vector2(40, 72)
 
-[node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("8_0dbye")]
+[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("8_0dbye")]
 position = Vector2(32, 56)
 rotation = -1.5707964
 sarc_dir = Vector2(-1, 0)
-player = NodePath("../CharacterBody2D")
 
 [node name="Exit" parent="." unique_id=659552782 instance=ExtResource("9_1dyat")]
 position = Vector2(88, -40)
