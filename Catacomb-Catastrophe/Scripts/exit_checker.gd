@@ -22,7 +22,7 @@ func exit_checks() -> void:
 
 func on_retry_button_pressed() -> void:
 	Levels.reset_level()
-	
-	
+
+
 func on_next_level_button_pressed() -> void:
 	SceneManager.change_scene(next_level_path)
