@@ -8,7 +8,7 @@ size = Vector2(12, 12)
 
 [node name="Block" type="StaticBody2D" unique_id=302563434]
 collision_layer = 33
-collision_mask = 33
+collision_mask = 61
 script = ExtResource("1_4axq1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=968495960]
@@ -19,4 +19,4 @@ shape = SubResource("RectangleShape2D_qnpof")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1728742144]
 target_position = Vector2(0, 8)
-collision_mask = 62
+collision_mask = 63

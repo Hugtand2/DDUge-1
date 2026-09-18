@@ -37,4 +37,4 @@ offset_right = 182.0
 offset_bottom = 592.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(15, 15)
-text = "Use Arrowkeys to move"
+text = "Use Arrowkeys to move and push"
