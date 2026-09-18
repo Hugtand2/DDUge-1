@@ -1,7 +1,5 @@
 extends StaticBody2D
 
-signal block_moved_exit_check
-
 const tile_size: Vector2 = Vector2(16, 16)
 var is_moving: bool = false
 
