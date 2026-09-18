@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://bamc3cfxt4rls"]
 
 [ext_resource type="Script" uid="uid://dkwsc40wjm666" path="res://Scripts/ui.gd" id="1_w371h"]
+[ext_resource type="Texture2D" uid="uid://5chmqpv3aym3" path="res://Resources/LevelEnd/VictoryBG2.png" id="2_qwshj"]
+[ext_resource type="Texture2D" uid="uid://4i3qbaxf1p2m" path="res://Resources/LevelEnd/pyramide.png" id="3_48q88"]
+[ext_resource type="Texture2D" uid="uid://dhbm2kgy55mva" path="res://Resources/LevelEnd/GrayStar.png" id="4_xjg7p"]
+[ext_resource type="Texture2D" uid="uid://cublbhnxjnouw" path="res://Resources/LevelEnd/GoldStar.png" id="5_mg6lk"]
+
+[sub_resource type="SystemFont" id="SystemFont_2m6bp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yyq1l"]
+font = SubResource("SystemFont_2m6bp")
+font_size = 20
 
 [node name="LevelViewportUI" type="CanvasLayer" unique_id=1416940851]
 script = ExtResource("1_w371h")
@@ -16,25 +26,102 @@ offset_transform_enabled = true
 offset_transform_position = Vector2(15, -15)
 text = "Press R to retry"
 
+[node name="ArrowkeyLabel" type="Label" parent="." unique_id=1029033126]
+offset_left = -2.0
+offset_top = 559.0
+offset_right = 181.0
+offset_bottom = 582.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(15, 15)
+text = "Use Arrowkeys to move"
+
+[node name="VictoryBg2" type="Sprite2D" parent="." unique_id=1325836529]
+visible = false
+position = Vector2(588, 340)
+scale = Vector2(0.79583335, 0.82962966)
+texture = ExtResource("2_qwshj")
+
+[node name="Pyramide" type="Sprite2D" parent="." unique_id=1213843596]
+visible = false
+position = Vector2(593, 260)
+scale = Vector2(0.5, 0.483)
+texture = ExtResource("3_48q88")
+
+[node name="GrayStar1" type="Sprite2D" parent="." unique_id=579737117]
+visible = false
+position = Vector2(295, 442)
+scale = Vector2(0.54, 0.535)
+texture = ExtResource("4_xjg7p")
+
+[node name="GrayStar2" type="Sprite2D" parent="." unique_id=2094507577]
+visible = false
+position = Vector2(854, 432)
+scale = Vector2(0.54, 0.535)
+texture = ExtResource("4_xjg7p")
+
+[node name="GrayStar3" type="Sprite2D" parent="." unique_id=190422508]
+visible = false
+position = Vector2(588, 435)
+scale = Vector2(0.54, 0.535)
+texture = ExtResource("4_xjg7p")
+
+[node name="GoldStar1" type="Sprite2D" parent="." unique_id=1561336637]
+visible = false
+position = Vector2(295, 442.1875)
+scale = Vector2(0.5349999, 0.5240625)
+texture = ExtResource("5_mg6lk")
+
+[node name="GoldStar2" type="Sprite2D" parent="." unique_id=1186189551]
+visible = false
+position = Vector2(854, 433.00003)
+scale = Vector2(0.5349999, 0.5240625)
+texture = ExtResource("5_mg6lk")
+
+[node name="GoldStar3" type="Sprite2D" parent="." unique_id=354316741]
+visible = false
+position = Vector2(588.00006, 435.00003)
+scale = Vector2(0.5349999, 0.5240625)
+texture = ExtResource("5_mg6lk")
+
 [node name="RetryButton" type="Button" parent="." unique_id=379734946]
-offset_left = 5.0
-offset_top = 36.0
-offset_right = 99.0
-offset_bottom = 67.0
+visible = false
+offset_left = 312.0
+offset_top = 565.0
+offset_right = 439.0
+offset_bottom = 622.0
 text = "Retry Level"
 
 [node name="NextLevelButton" type="Button" parent="." unique_id=1187007733]
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 94.0
-offset_bottom = 34.0
+visible = false
+offset_left = 710.0
+offset_top = 565.0
+offset_right = 834.0
+offset_bottom = 622.0
 text = "Next Level"
 
-[node name="ArrowkeyLabel" type="Label" parent="." unique_id=1029033126]
-offset_left = -1.0
-offset_top = 569.0
-offset_right = 182.0
-offset_bottom = 592.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(15, 15)
-text = "Use Arrowkeys to move and push"
+[node name="StarLevelBeat" type="Label" parent="." unique_id=36899122]
+visible = false
+offset_left = 232.0
+offset_top = 535.0
+offset_right = 362.0
+offset_bottom = 576.0
+text = "Level Cleared"
+label_settings = SubResource("LabelSettings_yyq1l")
+
+[node name="GoldStarLabel2" type="Label" parent="." unique_id=1229252333]
+visible = false
+offset_left = 784.0
+offset_top = 525.0
+offset_right = 958.0
+offset_bottom = 566.0
+text = " Under X moves"
+label_settings = SubResource("LabelSettings_yyq1l")
+
+[node name="GoldStarLabel3" type="Label" parent="." unique_id=1012800504]
+visible = false
+offset_left = 514.0
+offset_top = 529.0
+offset_right = 690.0
+offset_bottom = 570.0
+text = "Under X moves"
+label_settings = SubResource("LabelSettings_yyq1l")

@@ -6,6 +6,7 @@ var dying: bool = false
 
 # Signal for death animation finish
 signal on_death_anim_finished
+signal player_moved
 
 func _ready() -> void:
 	
@@ -42,6 +43,7 @@ func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
 	_move(dir)
 
 func _move(dir: Vector2):
+	player_moved.emit()
 	global_position += dir * tile_size
 	$Sprite2D.global_position -=dir * tile_size
 	
@@ -59,6 +61,7 @@ func _process(delta: float) -> void:
 
 # Function that checks every animation finish
 func on_anim_finished():
+	player_moved.emit()
 	# check if animation was death
 	if $Sprite2D.animation == "death":
 		# Death animation finished

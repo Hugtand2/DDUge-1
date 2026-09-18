@@ -363,6 +363,8 @@ zoom = Vector2(5, 5)
 position = Vector2(72, -40)
 rotation = 4.712389
 next_level_path = "res://Scenes/LevelFive.tscn"
+second_goldstar_req = 130
+third_goldstar_req = 93
 
 [node name="UI" parent="." unique_id=1416940851 instance=ExtResource("13_bci4m")]
 
