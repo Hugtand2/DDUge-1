@@ -2,17 +2,27 @@ extends CharacterBody2D
 
 const tile_size: Vector2 = Vector2(16, 16)
 var sprite_node_pos_tween: Tween
+var dying: bool = false
+
+# Signal for death animation finish
+signal on_death_anim_finished
 
 func _ready() -> void:
+	
 	$HurtBox.body_entered.connect(_on_body_entered)
 	$Sprite2D.connect("animation_finished",Callable(self,"on_anim_finished"))
+	# When death animation is done, kill
+	on_death_anim_finished.connect(kill)
+	$Sprite2D.frame = 0
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is TileMapLayer and body.name == "SpikesTileMapLayer":
-		kill()
-
+		# The code will detect when death animation is done, and kill the player
+		dying = true
+		$Sprite2D.play("death")
+		
 func _physics_process(delta: float) -> void:
-	if !sprite_node_pos_tween or !sprite_node_pos_tween.is_running():
+	if !sprite_node_pos_tween and dying == false or !sprite_node_pos_tween.is_running() and dying == false:
 		if Input.is_action_pressed("ui_up"):
 			_try_move(Vector2(0, -1), $up)
 		elif Input.is_action_pressed("ui_down"):
@@ -31,9 +41,6 @@ func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
 		return
 	_move(dir)
 
-func on_anim_finished():
-	Levels.reset_level()
-
 func _move(dir: Vector2):
 	global_position += dir * tile_size
 	$Sprite2D.global_position -=dir * tile_size
@@ -50,10 +57,15 @@ func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_R):
 		Levels.reset_level()
 
+# Function that checks every animation finish
+func on_anim_finished():
+	# check if animation was death
+	if $Sprite2D.animation == "death":
+		# Death animation finished
+		on_death_anim_finished.emit()
 
-
+# Kill the player by resetting. Will play after animation (instant)
 func kill() -> void:
-	$Sprite2D.play("death")
 	print("Killed")
-	
+	Levels.reset_level()
 	return
