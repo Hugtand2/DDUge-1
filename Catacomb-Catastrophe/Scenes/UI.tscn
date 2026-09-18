@@ -18,15 +18,17 @@ offset_transform_position = Vector2(15, -15)
 text = "Press R to retry"
 
 [node name="RetryButton" type="Button" parent="." unique_id=379734946]
-visible = false
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 5.0
+offset_top = 36.0
+offset_right = 99.0
+offset_bottom = 67.0
 text = "Retry Level"
 
 [node name="NextLevelButton" type="Button" parent="." unique_id=1187007733]
-visible = false
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 94.0
+offset_bottom = 34.0
 text = "Next Level"
 
 [node name="ArrowkeyLabel" type="Label" parent="." unique_id=1029033126]
