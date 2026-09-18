@@ -249,7 +249,7 @@ tile_set = SubResource("TileSet_yyq1l")
 [node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("3_6b1hk")]
 position = Vector2(40, 56)
 
-[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("5_t5ss4")]
+[node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("5_t5ss4")]
 position = Vector2(40, 16)
 maxPushes = 1
 

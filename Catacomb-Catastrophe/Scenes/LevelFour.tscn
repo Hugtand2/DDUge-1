@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dhf0ok1y28f2w"]
 
 [ext_resource type="Script" uid="uid://by0ndfwxcqvxg" path="res://Scripts/level_four.gd" id="1_dhsxn"]
-[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_fpfd7"]
+[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Cutscenes/Resources/Resources/Floors&More/Floor.png" id="2_fpfd7"]
 [ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="3_ktxsm"]
 [ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="4_nsnff"]
-[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="5_tpalw"]
+[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Cutscenes/Resources/Resources/Floors&More/Wall.png" id="5_tpalw"]
 [ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="6_ids1d"]
 [ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="7_3g3y0"]
 [ext_resource type="Texture2D" uid="uid://p3vggnbn312b" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtilefloorspike.png" id="8_al0af"]

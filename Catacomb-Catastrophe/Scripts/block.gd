@@ -13,7 +13,8 @@ func _ready() -> void:
 	ray_cast_2d.enabled = pushable
  
  
-
+# Returns true if this object successfully moved (or was clear to move),
+# false if it's blocked and could not be pushed.
 func push_block(dir: Vector2, raycast: RayCast2D) -> bool:
 	if is_moving or not pushable:
 		return false
@@ -40,3 +41,4 @@ func _move_animation(targetPosition):
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "global_position", targetPosition, 0.185).set_trans(Tween.TRANS_SINE)
 	tween.finished.connect(func(): is_moving = false)
+ 
