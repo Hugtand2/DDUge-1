@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ch2sfpf500l24"]
 
 [ext_resource type="Script" uid="uid://c2uamxigce4lm" path="res://Scripts/block.gd" id="1_4axq1"]
-[ext_resource type="Texture2D" uid="uid://civbl33f6ft3j" path="res://Resources/icon.svg" id="2_3ohxg"]
+[ext_resource type="Texture2D" uid="uid://dph7p5nm3k2hl" path="res://Resources/Sprites/Level_sprites/movableblock.png" id="2_8o1l4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnpof"]
 size = Vector2(12, 12)
@@ -12,8 +12,7 @@ collision_mask = 33
 script = ExtResource("1_4axq1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=968495960]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_3ohxg")
+texture = ExtResource("2_8o1l4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1902411433]
 shape = SubResource("RectangleShape2D_qnpof")
