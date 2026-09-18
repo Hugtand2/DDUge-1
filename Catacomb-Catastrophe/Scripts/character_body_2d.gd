@@ -49,5 +49,6 @@ func _process(delta: float) -> void:
 
 
 func kill() -> void:
+	$Sprite2D.play("death")
 	print("Killed")
 	return
