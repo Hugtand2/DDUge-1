@@ -264,10 +264,9 @@ tile_set = SubResource("TileSet_54cwd")
 position = Vector2(8, 56)
 collision_mask = 75
 
-[node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("8_h2835")]
+[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("8_h2835")]
 position = Vector2(40, 16)
 maxPushes = 1
-player = NodePath("../CharacterBody2D")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=978408697]
 position = Vector2(32, 32)
