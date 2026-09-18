@@ -10,7 +10,7 @@ size = Vector2(16, 16)
 script = ExtResource("1_1inhs")
 
 [node name="ExitRaycast" type="RayCast2D" parent="." unique_id=546996663]
-position = Vector2(8, 0)
+position = Vector2(16, 0)
 target_position = Vector2(-16, 0)
 collision_mask = 9
 
