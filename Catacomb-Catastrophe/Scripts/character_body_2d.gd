@@ -5,6 +5,7 @@ var sprite_node_pos_tween: Tween
 
 func _ready() -> void:
 	$HurtBox.body_entered.connect(_on_body_entered)
+	$Sprite2D.connect("animation_finished",Callable(self,"on_anim_finished"))
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is TileMapLayer and body.name == "SpikesTileMapLayer":
@@ -30,6 +31,9 @@ func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
 		return
 	_move(dir)
 
+func on_anim_finished():
+	Levels.reset_level()
+
 func _move(dir: Vector2):
 	global_position += dir * tile_size
 	$Sprite2D.global_position -=dir * tile_size
@@ -51,4 +55,5 @@ func _process(delta: float) -> void:
 func kill() -> void:
 	$Sprite2D.play("death")
 	print("Killed")
+	
 	return
