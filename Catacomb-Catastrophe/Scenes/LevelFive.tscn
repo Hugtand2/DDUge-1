@@ -1,20 +1,21 @@
-[gd_scene format=4 uid="uid://dhf0ok1y28f2w"]
+[gd_scene format=4 uid="uid://eve6qypvrfi1"]
 
-[ext_resource type="Script" uid="uid://by0ndfwxcqvxg" path="res://Scripts/level_four.gd" id="1_dhsxn"]
-[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="2_fpfd7"]
-[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="3_ktxsm"]
-[ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="4_nsnff"]
-[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="5_tpalw"]
-[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="6_ids1d"]
-[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="7_3g3y0"]
-[ext_resource type="Texture2D" uid="uid://p3vggnbn312b" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtilefloorspike.png" id="8_al0af"]
-[ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="9_ywuoa"]
-[ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="10_icb0n"]
-[ext_resource type="PackedScene" uid="uid://ce2yfc3jyue0v" path="res://Scenes/ExitChecker.tscn" id="11_s610l"]
-[ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="13_bci4m"]
+[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="1_fuopb"]
+[ext_resource type="Script" uid="uid://biq3vrn5kp74l" path="res://Scripts/level_five.gd" id="1_j1nuf"]
+[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="2_nevor"]
+[ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="3_j1nuf"]
+[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="4_pnbr4"]
+[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="5_315dp"]
+[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_661yo"]
+[ext_resource type="Texture2D" uid="uid://p3vggnbn312b" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtilefloorspike.png" id="7_k6vc4"]
+[ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="8_4vvjl"]
+[ext_resource type="PackedScene" uid="uid://ch2sfpf500l24" path="res://Scenes/block.tscn" id="8_nevor"]
+[ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="9_2gtgl"]
+[ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="12_leyr3"]
+[ext_resource type="PackedScene" uid="uid://ce2yfc3jyue0v" path="res://Scenes/ExitChecker.tscn" id="12_nevor"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrq1i"]
-texture = ExtResource("2_fpfd7")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8sih"]
+texture = ExtResource("1_fuopb")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -40,23 +41,23 @@ texture = ExtResource("2_fpfd7")
 6:2/0 = 0
 7:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1uma4"]
-texture = ExtResource("3_ktxsm")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nvj7"]
+texture = ExtResource("2_nevor")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c1u3j"]
-texture = ExtResource("4_nsnff")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80syj"]
+texture = ExtResource("3_j1nuf")
 0:0/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_kppon"]
+[sub_resource type="TileSet" id="TileSet_yj01h"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_wrq1i")
-sources/1 = SubResource("TileSetAtlasSource_1uma4")
-sources/2 = SubResource("TileSetAtlasSource_c1u3j")
+sources/0 = SubResource("TileSetAtlasSource_y8sih")
+sources/1 = SubResource("TileSetAtlasSource_4nvj7")
+sources/2 = SubResource("TileSetAtlasSource_80syj")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_istfy"]
-texture = ExtResource("5_tpalw")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3d6ju"]
+texture = ExtResource("4_pnbr4")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -218,64 +219,65 @@ texture = ExtResource("5_tpalw")
 15:4/0 = 0
 15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mqrqj"]
-texture = ExtResource("6_ids1d")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tyopv"]
+texture = ExtResource("5_315dp")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd0t4"]
-texture = ExtResource("7_3g3y0")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trqpk"]
+texture = ExtResource("6_661yo")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_y4gli"]
+[sub_resource type="TileSet" id="TileSet_3rhp4"]
 physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 4
-sources/0 = SubResource("TileSetAtlasSource_istfy")
-sources/1 = SubResource("TileSetAtlasSource_mqrqj")
-sources/2 = SubResource("TileSetAtlasSource_gd0t4")
+sources/0 = SubResource("TileSetAtlasSource_3d6ju")
+sources/1 = SubResource("TileSetAtlasSource_tyopv")
+sources/2 = SubResource("TileSetAtlasSource_trqpk")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpfd7"]
-texture = ExtResource("8_al0af")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58c8m"]
+texture = ExtResource("7_k6vc4")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_ktxsm"]
+[sub_resource type="TileSet" id="TileSet_taj8l"]
 physics_layer_0/collision_layer = 64
 physics_layer_0/collision_mask = 4
-sources/0 = SubResource("TileSetAtlasSource_fpfd7")
+sources/0 = SubResource("TileSetAtlasSource_58c8m")
 
-[node name="LevelFour" type="Node2D" unique_id=1670177793]
-script = ExtResource("1_dhsxn")
+[node name="LevelFive" type="Node2D" unique_id=1059882185]
+script = ExtResource("1_j1nuf")
 
-[node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=1451070349]
-tile_map_data = PackedByteArray("AAD+/wUAAgAAAAAAAAD9//7/AgAAAAAAAAD8//7/AgAAAAAAAAD7//7/AgAAAAAAAAD7////AgAAAAAAAAD7/wAAAgAAAAAAAAD7/wEAAgAAAAAAAAD7/wIAAgAAAAAAAAD7/wMAAgAAAAAAAAD7/wQAAgAAAAAAAAD7/wUAAgAAAAAAAAD7/wYAAgAAAAAAAAD8/wYAAgAAAAAAAAD9/wYAAgAAAAAAAAD+/wYAAgAAAAAAAAD9/wUAAgAAAAAAAAD8/wUAAgAAAAAAAAD8/wQAAgAAAAAAAAD9/wQAAgAAAAAAAAD9/wMAAgAAAAAAAAD8/wMAAgAAAAAAAAD8/wIAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wAAAgAAAAAAAAD8////AgAAAAAAAAD9////AgAAAAAAAAD9/wAAAgAAAAAAAAD9/wEAAgAAAAAAAAD9/wIAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAEAAYAAgAAAAAAAAADAAYAAgAAAAAAAAACAAYAAgAAAAAAAAABAAYAAgAAAAAAAAAAAAYAAgAAAAAAAAD//wYAAgAAAAAAAAAHAAYAAgAAAAAAAAAIAAYAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAIAP7/AgAAAAAAAAAJAP7/AgAAAAAAAAAJAP//AgAAAAAAAAAJAAAAAgAAAAAAAAAJAAEAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAJAAQAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAEAAgAAAAAAAAAIAAAAAgAAAAAAAAAIAP//AgAAAAAAAAD//wUAAgAAAAAAAAAAAAUAAgAAAAAAAAABAAUAAgAAAAAAAAACAAUAAgAAAAAAAAADAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAD//wMAAQAAAAAAAAAAAAMAAQAAAAAAAAABAAMAAQAAAAAAAAACAAMAAQAAAAAAAAADAAMAAQAAAAAAAAAFAAMAAQAAAAAAAAAGAAMAAQAAAAAAAAD//wIAAQAAAAAAAAD//wEAAQAAAAAAAAD//wAAAQAAAAAAAAD///7/AQAAAAAAAAAAAP7/AQAAAAAAAAAAAP//AQAAAAAAAAABAP7/AQAAAAAAAAACAP7/AQAAAAAAAAADAP7/AQAAAAAAAAAEAP7/AQAAAAAAAAAGAP7/AQAAAAAAAAAGAP//AQAAAAAAAAAGAAAAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAIAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAIAAQAAAAAAAAACAAIAAQAAAAAAAAADAAIAAQAAAAAAAAAEAAIAAQAAAAAAAAAFAAIAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAD7//3/AgAAAAAAAAD8//3/AgAAAAAAAAD9//3/AgAAAAAAAAD9//z/AgAAAAAAAAD8//z/AgAAAAAAAAD7//z/AgAAAAAAAAD+//z/AgAAAAAAAAD///z/AgAAAAAAAAAAAPz/AgAAAAAAAAABAPz/AgAAAAAAAAACAPz/AgAAAAAAAAADAPz/AgAAAAAAAAAEAPz/AgAAAAAAAAAFAPz/AgAAAAAAAAAGAPz/AgAAAAAAAAAHAPz/AgAAAAAAAAAIAPz/AgAAAAAAAAAIAP3/AgAAAAAAAAAJAP3/AgAAAAAAAAAJAPz/AgAAAAAAAAAKAPz/AgAAAAAAAAAKAP3/AgAAAAAAAAAKAP7/AgAAAAAAAAAKAP//AgAAAAAAAAAKAAAAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAIAAgAAAAAAAAAKAAEAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAYAAgAAAAAAAAA=")
-tile_set = SubResource("TileSet_kppon")
+[node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=1177071814]
+tile_map_data = PackedByteArray("AAD+/wUAAgAAAAAAAAD8//7/AgAAAAAAAAD7//7/AgAAAAAAAAD7////AgAAAAAAAAD7/wAAAgAAAAAAAAD7/wEAAgAAAAAAAAD7/wIAAgAAAAAAAAD7/wMAAgAAAAAAAAD7/wQAAgAAAAAAAAD7/wUAAgAAAAAAAAD7/wYAAgAAAAAAAAD8/wYAAgAAAAAAAAD9/wYAAgAAAAAAAAD+/wYAAgAAAAAAAAD9/wUAAgAAAAAAAAD8/wUAAgAAAAAAAAD8/wQAAgAAAAAAAAD8/wMAAgAAAAAAAAD8/wIAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wAAAgAAAAAAAAD8////AgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAEAAYAAgAAAAAAAAADAAYAAgAAAAAAAAACAAYAAgAAAAAAAAABAAYAAgAAAAAAAAAAAAYAAgAAAAAAAAD//wYAAgAAAAAAAAAHAAYAAgAAAAAAAAAIAAYAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAJAP7/AgAAAAAAAAAJAP//AgAAAAAAAAAJAAAAAgAAAAAAAAAJAAEAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAMAAgAAAAAAAAAJAAQAAgAAAAAAAAD//wUAAgAAAAAAAAAAAAUAAgAAAAAAAAABAAUAAgAAAAAAAAACAAUAAgAAAAAAAAADAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAD7//3/AgAAAAAAAAD8//3/AgAAAAAAAAD8//z/AgAAAAAAAAD7//z/AgAAAAAAAAAJAP3/AgAAAAAAAAAKAPz/AgAAAAAAAAAKAP3/AgAAAAAAAAAKAP7/AgAAAAAAAAAKAP//AgAAAAAAAAAKAAAAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAIAAgAAAAAAAAAKAAEAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAYAAgAAAAAAAAABAAMAAQAAAAAAAAACAAMAAQAAAAAAAAADAAMAAQAAAAAAAAAAAAMAAQAAAAAAAAAEAAMAAQAAAAAAAAAAAAIAAQAAAAAAAAABAAIAAQAAAAAAAAACAAIAAQAAAAAAAAADAAIAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAEAAQAAAAAAAAADAAEAAQAAAAAAAAACAAEAAQAAAAAAAAABAAEAAQAAAAAAAAAAAAEAAQAAAAAAAAD//wEAAQAAAAAAAAD//wAAAQAAAAAAAAD/////AQAAAAAAAAD///7/AQAAAAAAAAAAAP7/AQAAAAAAAAABAP7/AQAAAAAAAAACAP7/AQAAAAAAAAACAP3/AQAAAAAAAAABAP3/AQAAAAAAAAABAPz/AQAAAAAAAAACAPz/AQAAAAAAAAAGAAQAAgAAAAAAAAAHAAQAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAMAAgAAAAAAAAAHAAMAAgAAAAAAAAAGAAMAAgAAAAAAAAAGAAIAAgAAAAAAAAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAEAAgAAAAAAAAAHAAEAAgAAAAAAAAAGAAEAAgAAAAAAAAAGAAAAAgAAAAAAAAAHAAAAAgAAAAAAAAAIAAAAAgAAAAAAAAAIAP//AgAAAAAAAAAHAP//AgAAAAAAAAAGAP//AgAAAAAAAAAGAP7/AgAAAAAAAAAFAP7/AgAAAAAAAAAFAP//AgAAAAAAAAAEAP//AgAAAAAAAAAEAP7/AgAAAAAAAAAHAP7/AgAAAAAAAAAIAP7/AgAAAAAAAAAIAP3/AgAAAAAAAAAHAP3/AgAAAAAAAAAGAP3/AgAAAAAAAAAFAP3/AgAAAAAAAAAEAP3/AgAAAAAAAAAEAPz/AgAAAAAAAAAFAPz/AgAAAAAAAAAGAPz/AgAAAAAAAAAHAPz/AgAAAAAAAAAIAPz/AgAAAAAAAAAJAPz/AgAAAAAAAAAKAPv/AgAAAAAAAAAJAPv/AgAAAAAAAAAIAPv/AgAAAAAAAAAHAPv/AgAAAAAAAAAGAPv/AgAAAAAAAAAFAPv/AgAAAAAAAAAEAPv/AgAAAAAAAAD///z/AgAAAAAAAAD///v/AgAAAAAAAAD+//v/AgAAAAAAAAD9//v/AgAAAAAAAAD9//z/AgAAAAAAAAD+//z/AgAAAAAAAAD8//v/AgAAAAAAAAD7//v/AgAAAAAAAAD9//3/AgAAAAAAAAD9//7/AgAAAAAAAAD9////AgAAAAAAAAD9/wAAAgAAAAAAAAD9/wEAAgAAAAAAAAD9/wIAAgAAAAAAAAD9/wMAAgAAAAAAAAD9/wQAAgAAAAAAAAD+/wQAAgAAAAAAAAD+/wMAAgAAAAAAAAD7//r/AgAAAAAAAAD8//r/AgAAAAAAAAD9//r/AgAAAAAAAAD+//r/AgAAAAAAAAD///r/AgAAAAAAAAAAAPr/AgAAAAAAAAABAPr/AgAAAAAAAAACAPr/AgAAAAAAAAADAPr/AgAAAAAAAAAEAPr/AgAAAAAAAAAFAPr/AgAAAAAAAAAGAPr/AgAAAAAAAAAHAPr/AgAAAAAAAAAIAPr/AgAAAAAAAAAJAPr/AgAAAAAAAAAKAPr/AgAAAAAAAAA=")
+tile_set = SubResource("TileSet_yj01h")
 
-[node name="WallsTileMapLayer" type="TileMapLayer" parent="." unique_id=141962250]
-tile_map_data = PackedByteArray("AAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAD+/wQAAAAAAAAAAAAHAAQAAAAAAAAAAAD+//7/AAAAAAAAAAAHAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAD//wQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAMAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAHAP//AQAAAAAAAAAHAP3/AQAAAAAAAAAFAP3/AQAAAAAAAAADAP3/AQAAAAAAAAACAP3/AQAAAAAAAAAAAP3/AQAAAAAAAAD///3/AQAAAAAAAAD+//3/AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD+/wIAAQAAAAAAAAD+/wMAAQAAAAAAAAABAP3/AgAAAAAAAAAGAP3/AgAAAAAAAAADAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAHAAAAAQAAAAAAAAAEAAEAAQAAAAAAAAA=")
-tile_set = SubResource("TileSet_y4gli")
+[node name="WallsTileMapLayer" type="TileMapLayer" parent="." unique_id=842986655]
+tile_map_data = PackedByteArray("AAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAD//wQAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAMAAQAAAAAAAAAFAAIAAQAAAAAAAAAFAAEAAQAAAAAAAAADAP//AQAAAAAAAAADAP7/AQAAAAAAAAADAP3/AQAAAAAAAAADAPz/AQAAAAAAAAAAAPz/AQAAAAAAAAD+//7/AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD//wMAAQAAAAAAAAD//wIAAQAAAAAAAAAFAAAAAAAAAAAAAAD+/wIAAAAAAAAAAAD+//3/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAAAAAAAAAAAAAAADAPv/AQAAAAAAAAAEAAAAAgAAAAAAAAD///3/AgAAAAAAAAA=")
+tile_set = SubResource("TileSet_3rhp4")
 
-[node name="SpikesTileMapLayer" type="TileMapLayer" parent="." unique_id=1627499723]
-tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAAEAAMAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAD/////AAAAAAAAAAA=")
-tile_set = SubResource("TileSet_ktxsm")
+[node name="SpikesTileMapLayer" type="TileMapLayer" parent="." unique_id=1882864335]
+tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_taj8l")
 
-[node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("9_ywuoa")]
-position = Vector2(88, 8)
+[node name="Block" parent="." unique_id=302563434 instance=ExtResource("8_nevor")]
+position = Vector2(56, 40)
 
-[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("10_icb0n")]
-position = Vector2(80, 40)
-rotation = 1.5707964
-sarc_dir = Vector2(1, 0)
+[node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("8_4vvjl")]
+position = Vector2(24, 56)
+
+[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("9_2gtgl")]
+position = Vector2(24, 32)
 maxPushes = 1
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1937316828]
-position = Vector2(48, 16)
-zoom = Vector2(5, 5)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=268385241]
+position = Vector2(32, 0)
+zoom = Vector2(4, 4)
 
-[node name="ExitChecker" parent="." unique_id=1824096057 instance=ExtResource("11_s610l")]
-position = Vector2(72, -40)
-rotation = 4.712389
-next_level_path = "res://Scenes/LevelFive.tscn"
+[node name="ExitChecker" parent="." unique_id=1824096057 instance=ExtResource("12_nevor")]
+position = Vector2(24, -72)
+rotation = -1.5707964
+next_level_path = "res://Scenes/main.tscn"
 
-[node name="UI" parent="." unique_id=1416940851 instance=ExtResource("13_bci4m")]
+[node name="UI" parent="." unique_id=1416940851 instance=ExtResource("12_leyr3")]
