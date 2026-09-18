@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://bamc3cfxt4rls"]
 
-[ext_resource type="Script" uid="uid://kpd1aia0ybj3" path="res://Scripts/ui.gd" id="1_w371h"]
+[ext_resource type="Script" uid="uid://dkwsc40wjm666" path="res://Scripts/ui.gd" id="1_w371h"]
 
 [node name="LevelViewportUI" type="CanvasLayer" unique_id=1416940851]
 script = ExtResource("1_w371h")
 
 [node name="RetryLabel" type="Label" parent="." unique_id=76204930]
-visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -32,9 +31,10 @@ offset_bottom = 34.0
 text = "Next Level"
 
 [node name="ArrowkeyLabel" type="Label" parent="." unique_id=1029033126]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 569.0
+offset_right = 182.0
+offset_bottom = 592.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(15, 15)
 text = "Use Arrowkeys to move"

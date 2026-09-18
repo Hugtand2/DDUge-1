@@ -1,18 +1,18 @@
 [gd_scene format=4 uid="uid://eve6qypvrfi1"]
 
-[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Scenes/Resources/Resources/Floors&More/Floor.png" id="1_fuopb"]
+[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="1_fuopb"]
 [ext_resource type="Script" uid="uid://bgyoqaljrvji2" path="res://Scripts/level_five.gd" id="1_j1nuf"]
-[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Scenes/Resources/Sprites/Level_sprites/sandtile.png" id="2_nevor"]
+[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="2_nevor"]
 [ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="3_j1nuf"]
-[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Scenes/Resources/Resources/Floors&More/Wall.png" id="4_pnbr4"]
-[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Scenes/Resources/Sprites/Level_sprites/catacombwall.png" id="5_315dp"]
-[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Scenes/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_661yo"]
-[ext_resource type="Texture2D" uid="uid://p3vggnbn312b" path="res://Scenes/Resources/Sprites/Level_sprites/sandtilefloorspike.png" id="7_k6vc4"]
+[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="4_pnbr4"]
+[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="5_315dp"]
+[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_661yo"]
+[ext_resource type="Texture2D" uid="uid://p3vggnbn312b" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtilefloorspike.png" id="7_k6vc4"]
 [ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="8_4vvjl"]
 [ext_resource type="PackedScene" uid="uid://ch2sfpf500l24" path="res://Scenes/block.tscn" id="8_nevor"]
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="9_2gtgl"]
 [ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="12_leyr3"]
-[ext_resource type="PackedScene" uid="uid://ce2yfc3jyue0v" path="res://Scenes/ExitChecker.tscn" id="13_nevor"]
+[ext_resource type="PackedScene" uid="uid://ce2yfc3jyue0v" path="res://Scenes/ExitChecker.tscn" id="12_nevor"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8sih"]
 texture = ExtResource("1_fuopb")
@@ -275,9 +275,8 @@ maxPushes = 1
 position = Vector2(32, 0)
 zoom = Vector2(4, 4)
 
-[node name="LevelViewportUI" parent="Camera2D" unique_id=1416940851 instance=ExtResource("12_leyr3")]
-
-[node name="ExitChecker" parent="." unique_id=1824096057 instance=ExtResource("13_nevor")]
+[node name="ExitChecker" parent="." unique_id=1824096057 instance=ExtResource("12_nevor")]
 position = Vector2(24, -72)
-rotation = 4.712389
-next_level_path = "res://Scenes/LevelFive.tscn"
+rotation = -1.5707964
+
+[node name="UI" parent="." unique_id=1416940851 instance=ExtResource("12_leyr3")]
