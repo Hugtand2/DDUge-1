@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="5_t5ss4"]
 [ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_xohb6"]
 [ext_resource type="PackedScene" uid="uid://ce2yfc3jyue0v" path="res://Scenes/ExitChecker.tscn" id="11_0ieg5"]
+[ext_resource type="PackedScene" uid="uid://ch2sfpf500l24" path="res://Scenes/block.tscn" id="12_xohb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
 texture = ExtResource("2_6ha17")
@@ -248,14 +249,16 @@ tile_set = SubResource("TileSet_yyq1l")
 [node name="CharacterBody2D" parent="." unique_id=822320731 instance=ExtResource("3_6b1hk")]
 position = Vector2(40, 56)
 
-[node name="Sarcophagus" parent="." unique_id=1514378569 node_paths=PackedStringArray("player") instance=ExtResource("5_t5ss4")]
+[node name="Sarcophagus" parent="." unique_id=1514378569 instance=ExtResource("5_t5ss4")]
 position = Vector2(40, 16)
 maxPushes = 1
-player = NodePath("../CharacterBody2D")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1847131771]
 position = Vector2(40, 40)
 zoom = Vector2(5, 5)
+
+[node name="Block" parent="." unique_id=302563434 instance=ExtResource("12_xohb6")]
+position = Vector2(24, 40)
 
 [node name="ExitChecker" parent="." unique_id=1824096057 instance=ExtResource("11_0ieg5")]
 position = Vector2(88, 40)

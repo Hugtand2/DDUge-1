@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce2yfc3jyue0v"]
 
 [ext_resource type="Texture2D" uid="uid://4nm0adow30pi" path="res://Resources/Sprites/Level_sprites/exit.png" id="1_1d7t4"]
-[ext_resource type="Script" uid="uid://cgkxgs71ue2a4" path="res://Scripts/exit_checker.gd" id="1_1inhs"]
+[ext_resource type="Script" uid="uid://4528b2c3e104" path="res://Scripts/exit_checker.gd" id="1_1inhs"]
 
 [node name="ExitChecker" type="Node2D" unique_id=1824096057]
 script = ExtResource("1_1inhs")

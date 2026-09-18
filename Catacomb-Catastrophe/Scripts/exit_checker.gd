@@ -8,11 +8,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Sarc.block_moved.connect(exit_checks)
+	Sarc.block_moved_exit_check.connect(exit_checks)
 	next.pressed.connect(on_next_level_button_pressed)
 	retry.pressed.connect(on_retry_button_pressed)
 
 func exit_checks() -> void:
+	print("Exit checked")
 	if ExitRaycast.is_colliding():
 		print("Level Won! Bring up UI now")
 		next.show()
