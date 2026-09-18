@@ -19,7 +19,6 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 SceneManager="*uid://j532kt76vvbi"
 MusicPlayer="*uid://bxqb1kyglx634"
 Levels="*uid://bouvgetwec3vb"
-Ui="*uid://bamc3cfxt4rls"
 
 [display]
 
