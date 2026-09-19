@@ -9,4 +9,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func button_pressed() -> void:
-	SceneManager.change_scene("res://Scenes/LevelOne.tscn")
+	MusicPlayer.volume_db = -10
+	SceneManager.change_scene("res://Cutscenes/Intro_cutscene/intro_cutscene.tscn")
