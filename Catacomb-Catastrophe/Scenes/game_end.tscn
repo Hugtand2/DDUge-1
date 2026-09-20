@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://b5knets2wbxsx"]
+
+[ext_resource type="Script" uid="uid://da0cftkkt6qmv" path="res://Scripts/game_end.gd" id="1_wl1fq"]
+[ext_resource type="Texture2D" uid="uid://5chmqpv3aym3" path="res://Resources/LevelEnd/VictoryBG2.png" id="2_cmq3e"]
+[ext_resource type="Texture2D" uid="uid://i6yyd20j44h7" path="res://Resources/Sprites/Character_sprites/unkey/unkey.png" id="3_jasv6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnbr4"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_315dp"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_661yo"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6vc4"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vvjl"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gtgl"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvrag"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5npqu"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leyr3"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8sih"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(144, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nvj7"]
+atlas = ExtResource("3_jasv6")
+region = Rect2(160, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wiu0u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnbr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_315dp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_661yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6vc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vvjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gtgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvrag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5npqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_leyr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8sih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nvj7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GameEnd" type="Node2D" unique_id=1590724816]
+script = ExtResource("1_wl1fq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=102696960]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1968327552]
+texture = ExtResource("2_cmq3e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1163132625]
+position = Vector2(2.3841858e-07, -30)
+scale = Vector2(13, 13)
+sprite_frames = SubResource("SpriteFrames_wiu0u")
+
+[node name="Txt1" type="Label" parent="." unique_id=1747480030]
+offset_left = -453.0
+offset_top = -360.0
+offset_right = 456.0
+offset_bottom = -155.0
+theme_override_font_sizes/font_size = 150
+text = "You escaped"
+
+[node name="Txt2" type="Label" parent="." unique_id=173223479]
+offset_left = -553.0
+offset_top = 125.0
+offset_right = 552.0
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 150
+text = "the catacombs!"
+
+[node name="TxtThx" type="Label" parent="." unique_id=1372179833]
+offset_left = 163.0
+offset_top = -43.0
+offset_right = 567.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 50
+text = "thx for playing :3"

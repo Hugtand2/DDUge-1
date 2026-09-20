@@ -125,3 +125,11 @@ offset_right = 690.0
 offset_bottom = 570.0
 text = "Under X moves"
 label_settings = SubResource("LabelSettings_yyq1l")
+
+[node name="LevelIndex" type="RichTextLabel" parent="." unique_id=1733523390]
+visible = false
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 96.0
+offset_bottom = 220.0
+theme_override_font_sizes/normal_font_size = 30

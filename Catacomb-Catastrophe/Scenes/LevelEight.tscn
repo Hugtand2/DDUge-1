@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://dumru6gyqj042"]
 
-[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="1_vu7o6"]
-[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtile.png" id="2_8dbow"]
+[ext_resource type="Script" uid="uid://d1gpmxn86uvin" path="res://Scripts/level_eight.gd" id="1_8dbow"]
+[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Scenes/Resources/Resources/Floors&More/Floor.png" id="1_vu7o6"]
+[ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Scenes/Resources/Sprites/Level_sprites/sandtile.png" id="2_8dbow"]
 [ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="3_rxfal"]
-[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Resources/Floors&More/Wall.png" id="4_d4etf"]
-[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombwall.png" id="5_lx112"]
-[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_wrf2i"]
-[ext_resource type="Texture2D" uid="uid://p3vggnbn312b" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/sandtilefloorspike.png" id="7_06r4w"]
+[ext_resource type="Texture2D" uid="uid://d2gsjy31832nd" path="res://Scenes/Resources/Resources/Floors&More/Wall.png" id="4_d4etf"]
+[ext_resource type="Texture2D" uid="uid://b77kbqtuqn040" path="res://Scenes/Resources/Sprites/Level_sprites/catacombwall.png" id="5_lx112"]
+[ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Scenes/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_wrf2i"]
+[ext_resource type="Texture2D" uid="uid://p3vggnbn312b" path="res://Scenes/Resources/Sprites/Level_sprites/sandtilefloorspike.png" id="7_06r4w"]
 [ext_resource type="PackedScene" uid="uid://ch2sfpf500l24" path="res://Scenes/block.tscn" id="8_b4lqh"]
 [ext_resource type="PackedScene" uid="uid://deqsm08qqq4sc" path="res://Scenes/Player.tscn" id="9_yfspr"]
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="10_ntnbj"]
@@ -246,6 +247,7 @@ physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_teisu")
 
 [node name="LevelEight" type="Node2D" unique_id=17237862]
+script = ExtResource("1_8dbow")
 
 [node name="FloorTileMapLayer" type="TileMapLayer" parent="." unique_id=225538721]
 tile_map_data = PackedByteArray("AAD+/wUAAQAAAAAAAAD//wUAAQAAAAAAAAAAAAUAAQAAAAAAAAABAAUAAQAAAAAAAAACAAUAAQAAAAAAAAACAAQAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wMAAQAAAAAAAAD+/wIAAQAAAAAAAAD+/wEAAQAAAAAAAAD+/wAAAQAAAAAAAAD//wAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAD8/wcAAgAAAAAAAAD9/wcAAgAAAAAAAAD+/wcAAgAAAAAAAAD//wcAAgAAAAAAAAAAAAcAAgAAAAAAAAABAAcAAgAAAAAAAAACAAcAAgAAAAAAAAADAAcAAgAAAAAAAAAEAAcAAgAAAAAAAAAFAAcAAgAAAAAAAAAGAAcAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAIAAgAAAAAAAAAHAAEAAgAAAAAAAAAHAAAAAgAAAAAAAAAHAP//AgAAAAAAAAAHAP7/AgAAAAAAAAAGAP7/AgAAAAAAAAAFAP7/AgAAAAAAAAAEAP7/AgAAAAAAAAADAP7/AgAAAAAAAAACAP7/AgAAAAAAAAABAP7/AgAAAAAAAAAAAP7/AgAAAAAAAAD///7/AgAAAAAAAAD+//7/AgAAAAAAAAD9//7/AgAAAAAAAAD8//7/AgAAAAAAAAD7//7/AgAAAAAAAAD6//7/AgAAAAAAAAD5//7/AgAAAAAAAAD5////AgAAAAAAAAD5/wAAAgAAAAAAAAD5/wEAAgAAAAAAAAD5/wIAAgAAAAAAAAD5/wMAAgAAAAAAAAD5/wQAAgAAAAAAAAD5/wUAAgAAAAAAAAD5/wYAAgAAAAAAAAD5/wcAAgAAAAAAAAD6/wcAAgAAAAAAAAD7/wcAAgAAAAAAAAD8/wYAAgAAAAAAAAD7/wYAAgAAAAAAAAD6/wYAAgAAAAAAAAD6/wUAAgAAAAAAAAD7/wUAAgAAAAAAAAD8/wUAAgAAAAAAAAD8/wQAAgAAAAAAAAD7/wQAAgAAAAAAAAD6/wQAAgAAAAAAAAD6/wMAAgAAAAAAAAD7/wMAAgAAAAAAAAD8/wMAAgAAAAAAAAD8/wIAAgAAAAAAAAD7/wIAAgAAAAAAAAD6/wIAAgAAAAAAAAD6/wEAAgAAAAAAAAD7/wEAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wAAAgAAAAAAAAD7/wAAAgAAAAAAAAD6/wAAAgAAAAAAAAD6////AgAAAAAAAAD7////AgAAAAAAAAD8////AgAAAAAAAAADAP//AgAAAAAAAAAEAP//AgAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAGAAAAAgAAAAAAAAAFAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAADAAAAAgAAAAAAAAADAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAAFAAEAAgAAAAAAAAAGAAEAAgAAAAAAAAAGAAIAAgAAAAAAAAAFAAIAAgAAAAAAAAAEAAIAAgAAAAAAAAADAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAGAAMAAgAAAAAAAAAEAAMAAgAAAAAAAAAEAAQAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAGAAYAAgAAAAAAAAA=")
@@ -284,7 +286,7 @@ zoom = Vector2(5, 5)
 
 [node name="ExitChecker" parent="." unique_id=1824096057 instance=ExtResource("11_lyuxh")]
 position = Vector2(40, 24)
-next_level_path = "res://Scenes/main.tscn"
+next_level_path = "res://Scenes/game_end.tscn"
 second_goldstar_req = 50
 third_goldstar_req = 43
 

@@ -1,0 +1,309 @@
+[gd_scene format=3 uid="uid://bm8ogl6h5q8yj"]
+
+[ext_resource type="Script" uid="uid://c33r5f37hgj7s" path="res://Cutscenes/Intro_cutscene/intro_cutscene.gd" id="1_dq2oj"]
+[ext_resource type="Texture2D" uid="uid://4i3qbaxf1p2m" path="res://Resources/LevelEnd/pyramide.png" id="1_e74kq"]
+[ext_resource type="Texture2D" uid="uid://6ger7lenrwqg" path="res://Scenes/Resources/Sprites/Character_sprites/Guy/Guy.png" id="2_dq2oj"]
+[ext_resource type="AudioStream" uid="uid://doimxhcj2pc8v" path="res://Audio/intro_cutscene_1.mp3" id="2_h6y1r"]
+[ext_resource type="Texture2D" uid="uid://bc6ubsjim5dxe" path="res://Resources/Sprites/Level_sprites/TileSets/Tile.png" id="2_kjop6"]
+[ext_resource type="AudioStream" uid="uid://dx4dfqutj5oqw" path="res://Audio/Fahhh - QuickSounds.com.mp3" id="3_g1k4h"]
+[ext_resource type="Texture2D" uid="uid://cpctrptcylibw" path="res://Resources/exclamation_mark.png" id="4_6fuuk"]
+[ext_resource type="AudioStream" uid="uid://bcqml5m1ws3ij" path="res://Audio/intro_cutscene_2.mp3" id="4_mfwdq"]
+[ext_resource type="Texture2D" uid="uid://ht8sw5cyx6tr" path="res://Scenes/Resources/Sprites/Character_sprites/Sarcophagus.png" id="4_togah"]
+[ext_resource type="Script" uid="uid://vyo78te1qxvm" path="res://Cutscenes/Intro_cutscene/audio_stream_player.gd" id="7_xygth"]
+
+[sub_resource type="Animation" id="Animation_dq2oj"]
+resource_name = "Cutscene"
+length = 19.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.0666666, 8.5, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1338.9999, 473.99997), Vector2(800, 474), Vector2(550, 400), Vector2(450, 300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pyramid:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 6.0666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-335, 205), Vector2(400, 205)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(6.0666666, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(4, 4)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(6.07, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(572, 319), Vector2(390, 285)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sarcophagus:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(7, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sarcophagus:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(8),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(317, 285)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sarcophagus:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(8),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.21293017]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Player:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(6.0649996, 8.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-20, 20), Vector2(-5, 5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Player/Exclamationmark:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(10.033334, 12.033334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "audio"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AudioStreamPlayer")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"clips": [{
+"end_offset": 2.2999997,
+"start_offset": 0.0,
+"stream": ExtResource("2_h6y1r")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_g1k4h")
+}, {
+"end_offset": 0.6600001,
+"start_offset": 0.22,
+"stream": ExtResource("4_mfwdq")
+}],
+"times": PackedFloat32Array(0, 12.033334, 14.08)
+}
+tracks/9/use_blend = true
+
+[sub_resource type="Animation" id="Animation_togah"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1338.9999, 473.99997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pyramid:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-335, 205)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(572, 319)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sarcophagus:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sarcophagus:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(317, 285)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sarcophagus:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.21293017]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Player:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, 20)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Player/Exclamationmark:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_togah"]
+_data = {
+&"Cutscene": SubResource("Animation_dq2oj"),
+&"RESET": SubResource("Animation_togah")
+}
+
+[node name="IntroCutscene" type="Node2D" unique_id=1584334248]
+script = ExtResource("1_dq2oj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=816811620]
+libraries/ = SubResource("AnimationLibrary_togah")
+
+[node name="Pyramid" type="Sprite2D" parent="." unique_id=576202817]
+position = Vector2(-335, 205)
+scale = Vector2(0.5158854, 0.562037)
+texture = ExtResource("1_e74kq")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=985420102]
+position = Vector2(1338.9999, 473.99997)
+scale = Vector2(-20, 20)
+texture = ExtResource("2_dq2oj")
+
+[node name="Exclamationmark" type="Sprite2D" parent="Player" unique_id=1134471639]
+visible = false
+position = Vector2(15, -15)
+rotation = 3.4906585
+scale = Vector2(0.02, -0.02)
+texture = ExtResource("4_6fuuk")
+centered = false
+
+[node name="Sarcophagus" type="Sprite2D" parent="." unique_id=1161467684]
+visible = false
+position = Vector2(317, 285)
+rotation = -0.21293017
+scale = Vector2(3, 3)
+texture = ExtResource("4_togah")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=221353902]
+show_behind_parent = true
+position = Vector2(570.5, 318.5)
+scale = Vector2(72.812485, 41.1875)
+texture = ExtResource("2_kjop6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=386290529]
+position = Vector2(572, 319)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1229685159]
+script = ExtResource("7_xygth")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
