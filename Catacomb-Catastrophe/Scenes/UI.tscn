@@ -33,7 +33,7 @@ offset_right = 181.0
 offset_bottom = 582.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(15, 15)
-text = "Use Arrowkeys to move"
+text = "Use Arrowkeys to move and push"
 
 [node name="VictoryBg2" type="Sprite2D" parent="." unique_id=1325836529]
 visible = false
