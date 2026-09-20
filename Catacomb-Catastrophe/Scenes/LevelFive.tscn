@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://eve6qypvrfi1"]
 
-[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Cutscenes/Resources/Resources/Floors&More/Floor.png" id="1_fuopb"]
+[ext_resource type="Texture2D" uid="uid://b05f3vra0jdos" path="res://Resources/Floors&More/Floor.png" id="1_fuopb"]
 [ext_resource type="Script" uid="uid://bgyoqaljrvji2" path="res://Scripts/level_five.gd" id="1_j1nuf"]
 [ext_resource type="Texture2D" uid="uid://c0n0qc7enre0g" path="res://Scenes/Resources/Sprites/Level_sprites/sandtile.png" id="2_nevor"]
 [ext_resource type="Texture2D" uid="uid://cxodd1iferjvs" path="res://Resources/Sprites/Level_sprites/black.png" id="3_j1nuf"]
@@ -364,9 +364,9 @@ zoom = Vector2(4, 4)
 [node name="ExitChecker" parent="." unique_id=1824096057 instance=ExtResource("12_nevor")]
 position = Vector2(24, -72)
 rotation = -1.5707964
+next_level_path = "res://Scenes/LevelSix.tscn"
 second_goldstar_req = 33
 third_goldstar_req = 28
-next_level_path = "res://Scenes/LevelSix.tscn"
 
 [node name="UI" parent="." unique_id=1416940851 instance=ExtResource("12_leyr3")]
 
