@@ -289,5 +289,7 @@ zoom = Vector2(5, 5)
 [node name="ExitChecker" parent="." unique_id=1824096057 instance=ExtResource("11_ogmhd")]
 position = Vector2(72, 8)
 next_level_path = "res://Scenes/LevelSeven.tscn"
+second_goldstar_req = 40
+third_goldstar_req = 29
 
 [node name="UI" parent="." unique_id=1416940851 instance=ExtResource("12_vm8ph")]

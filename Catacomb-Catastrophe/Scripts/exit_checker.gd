@@ -20,6 +20,7 @@ extends Node2D
 # Ny level beat grafik
 @onready var victory_background: Sprite2D = $"../UI/VictoryBg2"
 @onready var pyramid: Sprite2D = $"../UI/Pyramide"
+@onready var level_index: RichTextLabel = $"../UI/LevelIndex"
 
 @onready var graystar1: Sprite2D = $"../UI/GrayStar1"
 @onready var graystar2: Sprite2D = $"../UI/GrayStar2"
@@ -36,6 +37,9 @@ extends Node2D
 
 
 func _ready() -> void:
+	# Sets leveltextlabel
+	level_index.text = "Level %d/9" % Levels.current_level
+	
 	Sarc.block_moved_exit_check.connect(exit_checks)
 	next.pressed.connect(on_next_level_button_pressed)
 	retry.pressed.connect(on_retry_button_pressed)
@@ -52,6 +56,7 @@ func exit_checks() -> void:
 		retry.show()
 		victory_background.show()
 		pyramid.show()
+		level_index.show()
 		# Altid show grå stjerner
 		graystar1.show()
 		graystar2.show()
@@ -85,4 +90,5 @@ func on_retry_button_pressed() -> void:
 
 
 func on_next_level_button_pressed() -> void:
+	Levels.current_level += 1
 	SceneManager.change_scene(next_level_path)
