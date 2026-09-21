@@ -24,9 +24,13 @@ func _on_body_entered(body: Node2D) -> void:
 		
 func _physics_process(delta: float) -> void:
 	if !sprite_node_pos_tween and dying == false or !sprite_node_pos_tween.is_running() and dying == false:
+		if Input.is_action_just_pressed("ui_up"):
 			_try_move(Vector2(0, -1), $up)
+		elif Input.is_action_just_pressed("ui_down"):
 			_try_move(Vector2(0, 1), $down)
+		elif Input.is_action_just_pressed("ui_left"):
 			_try_move(Vector2(-1, 0), $left)
+		elif Input.is_action_just_pressed("ui_right"):
 			_try_move(Vector2(1, 0), $right)
 
 func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
