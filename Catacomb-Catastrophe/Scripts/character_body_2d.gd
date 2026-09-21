@@ -23,14 +23,14 @@ func _on_body_entered(body: Node2D) -> void:
 		$Sprite2D.play("death")
 		
 func _physics_process(delta: float) -> void:
-	if !sprite_node_pos_tween and dying == false or !sprite_node_pos_tween.is_running() and dying == false:
-		if Input.is_action_pressed("ui_up"):
+	if dying == false and dying == false:
+		if Input.is_action_just_pressed("ui_up"):
 			_try_move(Vector2(0, -1), $up)
-		elif Input.is_action_pressed("ui_down"):
+		elif Input.is_action_just_pressed("ui_down"):
 			_try_move(Vector2(0, 1), $down)
-		elif Input.is_action_pressed("ui_left"):
+		elif Input.is_action_just_pressed("ui_left"):
 			_try_move(Vector2(-1, 0), $left)
-		elif Input.is_action_pressed("ui_right"):
+		elif Input.is_action_just_pressed("ui_right"):
 			_try_move(Vector2(1, 0), $right)
 
 func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
@@ -47,7 +47,7 @@ func _move(dir: Vector2):
 	global_position += dir * tile_size
 	$Sprite2D.global_position -=dir * tile_size
 	
-	if sprite_node_pos_tween:
+	if sprite_node_pos_tween and sprite_node_pos_tween.is_running():
 		sprite_node_pos_tween.kill()
 	sprite_node_pos_tween = create_tween()
 	sprite_node_pos_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
