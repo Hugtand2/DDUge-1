@@ -3,6 +3,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$UI/SkipLabel.show()
+	$UI/RetryLabel.hide()
+	$UI/MoveCount.hide()
 	$AnimationPlayer.play("Cutscene")
 	pass # Replace with function body.
 

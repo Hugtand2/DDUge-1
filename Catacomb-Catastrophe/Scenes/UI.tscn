@@ -17,6 +17,7 @@ font_size = 20
 script = ExtResource("1_w371h")
 
 [node name="SkipLabel" type="Label" parent="." unique_id=1293137472]
+visible = false
 offset_left = 998.0
 offset_top = 613.0
 offset_right = 1142.0
@@ -25,7 +26,6 @@ theme_override_font_sizes/font_size = 20
 text = "\"Space\" to skip"
 
 [node name="RetryLabel" type="Label" parent="." unique_id=76204930]
-visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -144,3 +144,11 @@ offset_top = 20.0
 offset_right = 96.0
 offset_bottom = 220.0
 theme_override_font_sizes/normal_font_size = 30
+
+[node name="MoveCount" type="RichTextLabel" parent="." unique_id=626557454]
+offset_left = 948.0
+offset_top = 44.0
+offset_right = 1177.0
+offset_bottom = 99.0
+theme_override_font_sizes/normal_font_size = 16
+text = "Move count: 0 "
