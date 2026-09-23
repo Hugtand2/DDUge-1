@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cublbhnxjnouw" path="res://Resources/LevelEnd/GoldStar.png" id="5_mg6lk"]
 
 [sub_resource type="SystemFont" id="SystemFont_2m6bp"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_yyq1l"]
 font = SubResource("SystemFont_2m6bp")
@@ -15,7 +16,16 @@ font_size = 20
 [node name="LevelViewportUI" type="CanvasLayer" unique_id=1416940851]
 script = ExtResource("1_w371h")
 
+[node name="SkipLabel" type="Label" parent="." unique_id=1293137472]
+offset_left = 998.0
+offset_top = 613.0
+offset_right = 1142.0
+offset_bottom = 641.0
+theme_override_font_sizes/font_size = 20
+text = "\"Space\" to skip"
+
 [node name="RetryLabel" type="Label" parent="." unique_id=76204930]
+visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -27,6 +37,7 @@ offset_transform_position = Vector2(15, -15)
 text = "Press R to retry"
 
 [node name="ArrowkeyLabel" type="Label" parent="." unique_id=1029033126]
+visible = false
 offset_left = -2.0
 offset_top = 559.0
 offset_right = 181.0
