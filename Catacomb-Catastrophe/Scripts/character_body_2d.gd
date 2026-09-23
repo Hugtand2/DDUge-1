@@ -22,7 +22,7 @@ func _on_body_entered(body: Node2D) -> void:
 		dying = true
 		$Sprite2D.play("death")
 		
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if dying == false and dying == false:
 		if Input.is_action_just_pressed("ui_up"):
 			_try_move(Vector2(0, -1), $up)
@@ -54,7 +54,7 @@ func _move(dir: Vector2):
 	sprite_node_pos_tween.tween_property($Sprite2D, "global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
 
 # Proccesses every frame
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Checks if "r" is pressed
 	if Input.is_key_pressed(KEY_R):
 		Levels.reset_level()

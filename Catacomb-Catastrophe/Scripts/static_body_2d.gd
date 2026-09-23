@@ -12,7 +12,8 @@ var upright: bool = true
 @onready var ray_cast_2d_lower: RayCast2D = $Raycasts/RayCast2DLower
 @onready var ray_cast_2d_upper: RayCast2D = $Raycasts/RayCast2DUpper
 @onready var current_rotation: int = int(rotation_degrees)
- 
+
+signal player_moved
 signal block_moved_exit_check
  
 func _ready() -> void:
@@ -26,6 +27,7 @@ func push_block(dir: Vector2, raycast: RayCast2D) -> bool:
 	if is_moving or not pushable:
 		return false
  	
+	
 	# Emit for movement check til hvis sarc rammer slutningen
 	block_moved_exit_check.emit()
 	if sarc_dir == Vector2(0, -1):

@@ -21,6 +21,7 @@ extends Node2D
 @onready var victory_background: Sprite2D = $"../UI/VictoryBg2"
 @onready var pyramid: Sprite2D = $"../UI/Pyramide"
 @onready var level_index: RichTextLabel = $"../UI/LevelIndex"
+@onready var move_counter: RichTextLabel = $"../UI/MoveCount"
 
 @onready var graystar1: Sprite2D = $"../UI/GrayStar1"
 @onready var graystar2: Sprite2D = $"../UI/GrayStar2"
@@ -83,6 +84,7 @@ func exit_checks() -> void:
 func count_player_move() -> void:
 	move_count += 1
 	print("Move count: " + str(move_count))
+	move_counter.text = "Move count:  %d" % move_count
 
 
 func on_retry_button_pressed() -> void:

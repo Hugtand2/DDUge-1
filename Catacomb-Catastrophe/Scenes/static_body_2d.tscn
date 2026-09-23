@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bl8iflvkpl17r"]
 
 [ext_resource type="Script" uid="uid://dck4utep23y11" path="res://Scripts/static_body_2d.gd" id="1_ypqmy"]
-[ext_resource type="Texture2D" uid="uid://ht8sw5cyx6tr" path="res://Resources/Sprites/Character_sprites/Sarcophagus.png" id="2_dyby8"]
+[ext_resource type="Texture2D" uid="uid://ht8sw5cyx6tr" path="res://Scenes/Resources/Sprites/Character_sprites/Sarcophagus.png" id="2_dyby8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnpof"]
 size = Vector2(16, 32)

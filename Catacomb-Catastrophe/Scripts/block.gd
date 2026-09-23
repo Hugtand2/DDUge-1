@@ -2,6 +2,8 @@ extends StaticBody2D
  
 const tile_size: Vector2 = Vector2(16, 16)
 var is_moving: bool = false
+
+signal player_moved
  
 @export var pushable := true
 @export var maxPushes := -1
@@ -14,10 +16,11 @@ func _ready() -> void:
  
  
 
-func push_block(dir: Vector2, raycast: RayCast2D) -> bool:
+func push_block(dir: Vector2, _raycast: RayCast2D) -> bool:
 	if is_moving or not pushable:
 		return false
- 
+	
+	
 	ray_cast_2d.target_position = dir * tile_size
 	ray_cast_2d.force_raycast_update()
  

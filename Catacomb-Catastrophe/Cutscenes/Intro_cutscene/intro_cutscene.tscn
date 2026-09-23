@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://bcqml5m1ws3ij" path="res://Audio/intro_cutscene_2.mp3" id="4_mfwdq"]
 [ext_resource type="Texture2D" uid="uid://ht8sw5cyx6tr" path="res://Scenes/Resources/Sprites/Character_sprites/Sarcophagus.png" id="4_togah"]
 [ext_resource type="Script" uid="uid://vyo78te1qxvm" path="res://Cutscenes/Intro_cutscene/audio_stream_player.gd" id="7_xygth"]
+[ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="11_gwvdb"]
 
 [sub_resource type="Animation" id="Animation_dq2oj"]
 resource_name = "Cutscene"
@@ -305,5 +306,7 @@ position = Vector2(572, 319)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1229685159]
 script = ExtResource("7_xygth")
+
+[node name="UI" parent="." unique_id=1416940851 instance=ExtResource("11_gwvdb")]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
