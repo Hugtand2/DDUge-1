@@ -13,7 +13,6 @@ var upright: bool = true
 @onready var ray_cast_2d_upper: RayCast2D = $Raycasts/RayCast2DUpper
 @onready var current_rotation: int = int(rotation_degrees)
 
-signal player_moved
 signal block_moved_exit_check
  
 func _ready() -> void:

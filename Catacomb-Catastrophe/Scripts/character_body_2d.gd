@@ -23,7 +23,7 @@ func _on_body_entered(body: Node2D) -> void:
 		$Sprite2D.play("death")
 		
 func _physics_process(_delta: float) -> void:
-	if dying == false and dying == false:
+	if dying == false:
 		if Input.is_action_just_pressed("ui_up"):
 			_try_move(Vector2(0, -1), $up)
 		elif Input.is_action_just_pressed("ui_down"):
@@ -38,6 +38,7 @@ func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
 		var collider = raycast.get_collider()
 		if collider and collider.has_method("push_block"):
 			$Sprite2D.play("push")
+			player_moved.emit()
 			collider.push_block(dir, raycast)
 		return
 	_move(dir)
@@ -47,6 +48,7 @@ func _move(dir: Vector2):
 	global_position += dir * tile_size
 	$Sprite2D.global_position -=dir * tile_size
 	
+	# What does this even do?
 	if sprite_node_pos_tween and sprite_node_pos_tween.is_running():
 		sprite_node_pos_tween.kill()
 	sprite_node_pos_tween = create_tween()
@@ -61,7 +63,7 @@ func _process(_delta: float) -> void:
 
 # Function that checks every animation finish
 func on_anim_finished():
-	player_moved.emit()
+	#player_moved.emit()
 	# check if animation was death
 	if $Sprite2D.animation == "death":
 		# Death animation finished

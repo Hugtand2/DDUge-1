@@ -271,6 +271,6 @@ zoom = Vector2(3.5, 3.5)
 position = Vector2(88, -40)
 next_level_path = "res://Scenes/LevelThree.tscn"
 second_goldstar_req = 53
-third_goldstar_req = 47
+third_goldstar_req = 46
 
 [node name="UI" parent="." unique_id=1416940851 instance=ExtResource("11_y7wce")]

@@ -83,7 +83,7 @@ func exit_checks() -> void:
 		
 func count_player_move() -> void:
 	move_count += 1
-	print("Move count: " + str(move_count))
+	#print("Move count: " + str(move_count))
 	move_counter.text = "Move count:  %d" % move_count
 
 
