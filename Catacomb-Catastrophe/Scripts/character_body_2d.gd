@@ -24,13 +24,14 @@ func _on_body_entered(body: Node2D) -> void:
 		
 func _physics_process(_delta: float) -> void:
 	if dying == false:
-		if Input.is_action_just_pressed("ui_up"):
+		# Inputmap registers both arrowkeys and wasd
+		if Input.is_action_just_pressed("up"):
 			_try_move(Vector2(0, -1), $up)
-		elif Input.is_action_just_pressed("ui_down"):
+		elif Input.is_action_just_pressed("down"):
 			_try_move(Vector2(0, 1), $down)
-		elif Input.is_action_just_pressed("ui_left"):
+		elif Input.is_action_just_pressed("left"):
 			_try_move(Vector2(-1, 0), $left)
-		elif Input.is_action_just_pressed("ui_right"):
+		elif Input.is_action_just_pressed("right"):
 			_try_move(Vector2(1, 0), $right)
 
 func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
