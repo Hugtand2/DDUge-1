@@ -47,7 +47,6 @@ func _ready() -> void:
 	player.player_moved.connect(count_player_move)
 
 func exit_checks() -> void:
-	print("Exit checked")
 	if ExitRaycast.is_colliding():
 		print("Level Won! Bring up UI now")
 		MusicPlayer.stop_music()

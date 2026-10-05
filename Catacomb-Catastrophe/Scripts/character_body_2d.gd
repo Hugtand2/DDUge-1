@@ -3,6 +3,7 @@ extends CharacterBody2D
 const tile_size: Vector2 = Vector2(16, 16)
 var sprite_node_pos_tween: Tween
 var dying: bool = false
+@onready var undo_handler: Node2D = $"../UndoHandler"
 
 # Signal for death animation finish
 signal on_death_anim_finished
@@ -15,6 +16,7 @@ func _ready() -> void:
 	# When death animation is done, kill
 	on_death_anim_finished.connect(kill)
 	$Sprite2D.frame = 0
+	add_to_group("UndoObjects")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is TileMapLayer and body.name == "SpikesTileMapLayer":
@@ -38,12 +40,14 @@ func _try_move (dir: Vector2, raycast: RayCast2D) -> void:
 		var collider = raycast.get_collider()
 		if collider and collider.has_method("push_block"):
 			$Sprite2D.play("push")
+			undo_handler.save_state()
 			player_moved.emit()
 			collider.push_block(dir, raycast)
 		return
 	_move(dir)
 
 func _move(dir: Vector2):
+	undo_handler.save_state()
 	player_moved.emit()
 	global_position += dir * tile_size
 	$Sprite2D.global_position -=dir * tile_size
@@ -60,7 +64,12 @@ func _process(_delta: float) -> void:
 	# Checks if "r" is pressed
 	if Input.is_key_pressed(KEY_R):
 		Levels.reset_level()
-
+	# Checks if "z" in pressed
+	if Input.is_action_just_pressed("undo"):
+		undo_handler.load_state()
+	#if Input.is_action_just_pressed("test"):
+		#undo_handler.save_state()
+	
 # Function that checks every animation finish
 func on_anim_finished():
 	#player_moved.emit()
@@ -68,7 +77,7 @@ func on_anim_finished():
 	if $Sprite2D.animation == "death":
 		# Death animation finished
 		on_death_anim_finished.emit()
-
+		
 # Kill the player by resetting. Will play after animation (instant)
 func kill() -> void:
 	print("Killed")
