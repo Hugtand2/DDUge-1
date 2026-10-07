@@ -10,7 +10,7 @@ var state_upright
 
 
 func _ready() -> void:
-	pass
+	save_state()
 
 
 func save_state() -> void:
