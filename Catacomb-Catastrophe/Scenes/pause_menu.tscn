@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://bni3q1r1a37cn"]
+
+[ext_resource type="Script" path="res://Scripts/Pause.gd" id="1_k0w1u"]
+[ext_resource type="Texture2D" path="res://Resources/Sprites/sound_setting.webp" id="2_1och7"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=15018210]
+process_mode = 3
+script = ExtResource("1_k0w1u")
+
+[node name="Control" type="Control" parent="." unique_id=695816617]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1047957707]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+
+[node name="Label" type="Label" parent="Control/ColorRect" unique_id=34819385]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -111.0
+offset_right = 89.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Catacomb Catastrophe"
+
+[node name="PauseScreen" type="Control" parent="Control" unique_id=1237244949]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -162.0
+offset_right = 286.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReturnToGame" type="Button" parent="Control/PauseScreen" unique_id=726881049]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -40.5
+offset_right = 31.0
+offset_bottom = -9.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return"
+
+[node name="SystemMenuButton" type="Button" parent="Control/PauseScreen" unique_id=1664561961]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = 3.5
+offset_right = 27.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Music"
+
+[node name="System" type="Control" parent="Control" unique_id=1239093289]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/System" unique_id=1213505986]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -71.0
+offset_right = 119.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/System/VBoxContainer" unique_id=282039575]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/System/VBoxContainer/HBoxContainer" unique_id=596069489]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "Music"
+
+[node name="Music" type="HSlider" parent="Control/System/VBoxContainer/HBoxContainer" unique_id=1549650791]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_icons/tick = ExtResource("2_1och7")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/System/VBoxContainer" unique_id=1851172077]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ReturnToMenu" type="Button" parent="Control/System/VBoxContainer/HBoxContainer2" unique_id=1304796424]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Return"
