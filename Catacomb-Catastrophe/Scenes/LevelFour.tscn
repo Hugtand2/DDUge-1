@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ce2yfc3jyue0v" path="res://Scenes/ExitChecker.tscn" id="11_s610l"]
 [ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="13_bci4m"]
 [ext_resource type="Texture2D" uid="uid://i6yyd20j44h7" path="res://Resources/Sprites/Character_sprites/unkey/unkey.png" id="13_fpfd7"]
+[ext_resource type="Script" uid="uid://c7dwyu7taqis5" path="res://Scripts/undo.gd" id="14_ktxsm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrq1i"]
 texture = ExtResource("2_fpfd7")
@@ -371,3 +372,6 @@ third_goldstar_req = 93
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=469234578]
 position = Vector2(155, 76)
 sprite_frames = SubResource("SpriteFrames_6cw5p")
+
+[node name="UndoHandler" type="Node2D" parent="." unique_id=1981048105]
+script = ExtResource("14_ktxsm")

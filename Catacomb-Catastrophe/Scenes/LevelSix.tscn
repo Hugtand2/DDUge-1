@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="10_b32k0"]
 [ext_resource type="PackedScene" uid="uid://ce2yfc3jyue0v" path="res://Scenes/ExitChecker.tscn" id="11_ogmhd"]
 [ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="12_vm8ph"]
+[ext_resource type="Script" uid="uid://c7dwyu7taqis5" path="res://Scripts/undo.gd" id="14_j3nbh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k5h0s"]
 texture = ExtResource("1_rxs7j")
@@ -293,3 +294,6 @@ second_goldstar_req = 35
 third_goldstar_req = 29
 
 [node name="UI" parent="." unique_id=1416940851 instance=ExtResource("12_vm8ph")]
+
+[node name="UndoHandler" type="Node2D" parent="." unique_id=562848803]
+script = ExtResource("14_j3nbh")

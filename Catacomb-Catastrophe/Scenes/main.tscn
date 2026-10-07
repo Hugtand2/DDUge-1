@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://cxftbpdnvtbgb"]
 
 [ext_resource type="Script" uid="uid://c2pnaknoc8cw5" path="res://Scripts/main_menu_control.gd" id="1_kry3j"]
-[ext_resource type="Texture2D" uid="uid://dcwogk5bve4o8" path="res://Resources/PlayButton/PlayButton.png" id="2_8gbba"]
-[ext_resource type="Texture2D" uid="uid://diwe78bo1qlt4" path="res://Resources/PlayButton/PlayButtonHover.png" id="3_jjvhh"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8gbba"]
-load_path = "res://.godot/imported/MainMenuBackground.jpg-87e74aedafa1d01ff6372df4072c36e7.ctex"
+[ext_resource type="Texture2D" uid="uid://cpeldye25kakc" path="res://Scenes/Resources/Resources/MainMenuBackground.jpg" id="2_21xkr"]
+[ext_resource type="Texture2D" uid="uid://dcwogk5bve4o8" path="res://Scenes/Resources/Resources/PlayButton/PlayButton.png" id="3_6bp64"]
+[ext_resource type="Texture2D" uid="uid://diwe78bo1qlt4" path="res://Scenes/Resources/Resources/PlayButton/PlayButtonHover.png" id="5_ynf5e"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jjvhh"]
 load_path = "res://.godot/imported/Clickbutton.png-f1492fe36f0f61624d8b12bd16efc3eb.ctex"
@@ -21,7 +19,7 @@ script = ExtResource("1_kry3j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=58332214]
 position = Vector2(960, 540)
-texture = SubResource("CompressedTexture2D_8gbba")
+texture = ExtResource("2_21xkr")
 
 [node name="MainMenuPlayButton" type="TextureButton" parent="." unique_id=1993455512]
 layout_mode = 0
@@ -29,9 +27,9 @@ offset_left = 651.0
 offset_top = 136.0
 offset_right = 1291.0
 offset_bottom = 356.0
-texture_normal = ExtResource("2_8gbba")
+texture_normal = ExtResource("3_6bp64")
 texture_pressed = SubResource("CompressedTexture2D_jjvhh")
-texture_hover = ExtResource("3_jjvhh")
+texture_hover = ExtResource("5_ynf5e")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1254674282]
 position = Vector2(958, 539)

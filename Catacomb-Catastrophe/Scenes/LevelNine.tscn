@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bamc3cfxt4rls" path="res://Scenes/UI.tscn" id="10_brney"]
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="11_s08yr"]
 [ext_resource type="PackedScene" uid="uid://ch2sfpf500l24" path="res://Scenes/block.tscn" id="12_mehal"]
+[ext_resource type="Script" uid="uid://c7dwyu7taqis5" path="res://Scripts/undo.gd" id="14_n6pya"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bnjn1"]
 texture = ExtResource("1_uuk5s")
@@ -298,3 +299,6 @@ position = Vector2(136, 104)
 
 [node name="Block6" parent="." unique_id=228941882 instance=ExtResource("12_mehal")]
 position = Vector2(24, 72)
+
+[node name="UndoHandler" type="Node2D" parent="." unique_id=1648968000]
+script = ExtResource("14_n6pya")
