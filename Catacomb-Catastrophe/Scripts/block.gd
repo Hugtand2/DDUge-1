@@ -13,8 +13,8 @@ signal player_moved
  
 func _ready() -> void:
 	ray_cast_2d.enabled = pushable
- 
- 
+	add_to_group("UndoObjects")
+
 
 func push_block(dir: Vector2, _raycast: RayCast2D) -> bool:
 	if is_moving or not pushable:

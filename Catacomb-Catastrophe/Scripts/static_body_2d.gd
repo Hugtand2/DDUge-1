@@ -20,6 +20,9 @@ func _ready() -> void:
 		upright = false
 	ray_cast_2d_lower.enabled = pushable
 	ray_cast_2d_upper.enabled = pushable
+	# We do not put staticbody2D in the undo obejcts, since it is handled seperately
+	# It has more parameters that need fine control
+	# Players and blocks need only the position
 
 
 func push_block(dir: Vector2, raycast: RayCast2D) -> bool:
@@ -178,3 +181,5 @@ func do_rotation(current_rotation_param, tween_vector_offset) -> void:
 	await tween.finished
 	is_moving = false
 	block_moved_exit_check.emit()
+	# Do we need a tween kill?
+	tween.kill()

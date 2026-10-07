@@ -49,7 +49,6 @@ func _ready() -> void:
 	set_process(false)
 
 func exit_checks() -> void:
-	print("Exit checked")
 	if ExitRaycast.is_colliding():
 		print("Level Won! Bring up UI now")
 		MusicPlayer.stop_music()

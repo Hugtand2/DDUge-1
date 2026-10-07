@@ -34,7 +34,8 @@ offset_right = 119.0
 grow_vertical = 0
 offset_transform_enabled = true
 offset_transform_position = Vector2(15, -15)
-text = "Press R to retry"
+text = "Press R to retry
+Press Z to undo last move"
 
 [node name="KeyLabel" type="Label" parent="." unique_id=1029033126]
 visible = false

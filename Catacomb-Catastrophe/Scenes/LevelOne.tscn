@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bl8iflvkpl17r" path="res://Scenes/static_body_2d.tscn" id="5_t5ss4"]
 [ext_resource type="Texture2D" uid="uid://dqvq4yvknre2x" path="res://Cutscenes/Resources/Resources/Sprites/Level_sprites/catacombtorch.png" id="6_xohb6"]
 [ext_resource type="PackedScene" uid="uid://ce2yfc3jyue0v" path="res://Scenes/ExitChecker.tscn" id="11_0ieg5"]
+[ext_resource type="Script" uid="uid://c7dwyu7taqis5" path="res://Scripts/undo.gd" id="12_xohb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1hk"]
 texture = ExtResource("2_6ha17")
@@ -265,3 +266,6 @@ second_goldstar_req = 14
 third_goldstar_req = 11
 
 [node name="UI" parent="." unique_id=1416940851 instance=ExtResource("5_080ts")]
+
+[node name="UndoHandler" type="Node2D" parent="." unique_id=1803462066]
+script = ExtResource("12_xohb6")
