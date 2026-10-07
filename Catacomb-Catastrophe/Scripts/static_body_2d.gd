@@ -1,8 +1,8 @@
 extends StaticBody2D
-
+ 
 const tile_size: Vector2 = Vector2(16, 16)
 var is_moving: bool = false
-
+ 
 @export var sarc_dir: Vector2
 var upright: bool = true
 
@@ -14,6 +14,10 @@ var upright: bool = true
 @onready var current_rotation: int = int(rotation_degrees)
 
 signal block_moved_exit_check
+
+
+ 
+
  
 func _ready() -> void:
 	if sarc_dir == Vector2(1, 0) or sarc_dir == Vector2(-1, 0):
@@ -32,6 +36,7 @@ func push_block(dir: Vector2, raycast: RayCast2D) -> bool:
 	
 	# Emit for movement check til hvis sarc rammer slutningen
 	block_moved_exit_check.emit()
+
 	if sarc_dir == Vector2(0, -1):
 		ray_cast_2d_lower.target_position = dir * tile_size
 		ray_cast_2d_upper.target_position = dir * tile_size
@@ -45,10 +50,15 @@ func push_block(dir: Vector2, raycast: RayCast2D) -> bool:
 		ray_cast_2d_upper.target_position = -Vector2((dir.y), -(dir.x)) * tile_size
 		ray_cast_2d_lower.target_position = -Vector2((dir.y), -(dir.x)) * tile_size
 
+
 	ray_cast_2d_lower.force_raycast_update()
 	ray_cast_2d_upper.force_raycast_update()
 
 	var moving_along_long_axis = (upright and dir.y != 0) or (not upright and dir.x != 0)
+
+
+ 
+ 
 
 	if moving_along_long_axis:
 		if not _can_pass(ray_cast_2d_lower, dir) or not _can_pass(ray_cast_2d_upper, dir):
@@ -61,6 +71,15 @@ func push_block(dir: Vector2, raycast: RayCast2D) -> bool:
 		return push_and_rotate(dir, raycast)
 
 
+		# Only the player may trigger a rotation. If another pushable
+		# block is doing the pushing, rotation is refused outright.
+		if raycast.owner.has_method("push_block"):
+			return false
+		return push_and_rotate(dir, raycast)
+ 
+ 
+# Checks one raycast; if it's blocked by something pushable, tries to push
+# that thing out of the way. Returns true if the path is (now) clear.
 func _can_pass(raycast: RayCast2D, dir: Vector2) -> bool:
 	if not raycast.is_colliding():
 		return true
@@ -86,6 +105,7 @@ func push_and_rotate(dir: Vector2, raycast: RayCast2D) -> bool:
 
 	var pusher = raycast.owner
 	var offset = pusher.global_position - global_position
+
 
 	if sarc_dir == Vector2(0, -1):
 		if dir.x > 0:
@@ -163,7 +183,6 @@ func push_and_rotate(dir: Vector2, raycast: RayCast2D) -> bool:
 				current_rotation += 90
 				do_rotation(current_rotation, Vector2(-8, 8))
 				sarc_dir = Vector2(0, -1)
-
 	return true
 
 

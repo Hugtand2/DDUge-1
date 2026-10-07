@@ -17,6 +17,7 @@ func _ready() -> void:
 	on_death_anim_finished.connect(kill)
 	$Sprite2D.frame = 0
 	add_to_group("UndoObjects")
+	
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is TileMapLayer and body.name == "SpikesTileMapLayer":
@@ -26,7 +27,6 @@ func _on_body_entered(body: Node2D) -> void:
 		
 func _physics_process(_delta: float) -> void:
 	if dying == false:
-		# Inputmap registers both arrowkeys and wasd
 		if Input.is_action_just_pressed("up"):
 			_try_move(Vector2(0, -1), $up)
 		elif Input.is_action_just_pressed("down"):

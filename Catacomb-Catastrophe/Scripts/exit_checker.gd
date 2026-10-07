@@ -82,6 +82,7 @@ func exit_checks() -> void:
 		
 		set_process(true)
 		
+		
 func count_player_move() -> void:
 	move_count += 1
 	#print("Move count: " + str(move_count))
@@ -95,6 +96,7 @@ func on_retry_button_pressed() -> void:
 func on_next_level_button_pressed() -> void:
 	Levels.current_level += 1
 	SceneManager.change_scene(next_level_path)
+	
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):

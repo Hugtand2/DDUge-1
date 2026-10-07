@@ -4,4 +4,4 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Levels.setup()
-	$UI/KeyLabel.show()
+	$UI/ArrowkeyLabel.show()
