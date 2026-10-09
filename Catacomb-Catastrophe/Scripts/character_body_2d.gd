@@ -83,3 +83,9 @@ func kill() -> void:
 	print("Killed")
 	Levels.reset_level()
 	return
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		get_tree().paused = true
+		var pause_menu : PauseMenu = load("res://Scenes/pause_menu.tscn").instantiate()
+		add_child(pause_menu)
