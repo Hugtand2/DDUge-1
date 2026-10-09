@@ -45,6 +45,8 @@ func _ready() -> void:
 	next.pressed.connect(on_next_level_button_pressed)
 	retry.pressed.connect(on_retry_button_pressed)
 	player.player_moved.connect(count_player_move)
+	
+	set_process(false)
 
 func exit_checks() -> void:
 	if ExitRaycast.is_colliding():
@@ -78,6 +80,7 @@ func exit_checks() -> void:
 		goldstarlabel2.show()
 		goldstarlabel3.show()
 		
+		set_process(true)
 		
 		
 func count_player_move() -> void:
@@ -93,3 +96,9 @@ func on_retry_button_pressed() -> void:
 func on_next_level_button_pressed() -> void:
 	Levels.current_level += 1
 	SceneManager.change_scene(next_level_path)
+	
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		set_process(false) # Prevent double-triggering
+		on_next_level_button_pressed()
