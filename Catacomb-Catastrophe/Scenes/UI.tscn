@@ -38,6 +38,7 @@ text = "Press R to retry
 Press Z to undo last move"
 
 [node name="ArrowkeyLabel" type="Label" parent="." unique_id=1029033126]
+visible = false
 offset_left = -1.0
 offset_top = 547.0
 offset_right = 258.0

@@ -67,6 +67,10 @@ func _process(_delta: float) -> void:
 		Levels.reset_level()
 	# Checks if "z" in pressed
 	if Input.is_action_just_pressed("undo"):
+		if dying:
+			dying = false
+			$Sprite2D.stop()
+			$Sprite2D.frame = 0
 		undo_handler.load_state()
 	#if Input.is_action_just_pressed("test"):
 		#undo_handler.save_state()
@@ -82,7 +86,6 @@ func on_anim_finished():
 # Kill the player by resetting. Will play after animation (instant)
 func kill() -> void:
 	print("Killed")
-	Levels.reset_level()
 	return
 
 func _unhandled_input(event: InputEvent) -> void:
