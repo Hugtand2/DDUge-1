@@ -13,6 +13,7 @@ func stop_music() -> void:
 	current_track = ""
 	stop()
 
+
 func play_custom_track(file_path: String) -> void:
 	# Checks if track is already playing
 	if current_track == file_path and playing:
