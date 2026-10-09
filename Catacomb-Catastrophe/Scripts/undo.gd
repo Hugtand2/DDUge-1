@@ -1,38 +1,43 @@
 extends Node
 
-var state := {}
+var history: Array[Dictionary] = []
 @onready var Sarc: StaticBody2D = $"../Sarcophagus"
-var state_sarc_dir
-var state_sarc_pos
-var state_sarc_rot
-var state_current_rot
-var state_upright
-
-
-func _ready() -> void:
-	save_state()
 
 
 func save_state() -> void:
 	print("Saving state...")
+	var snapshot := {}  # fresh dictionary every time
+
+	var objects := {}
 	for object in get_tree().get_nodes_in_group("UndoObjects"):
-		state[object.name] = object.global_position
-	state_sarc_dir = Sarc.sarc_dir
-	state_sarc_pos = Sarc.position
-	state_sarc_rot = Sarc.rotation
-	state_upright = Sarc.upright
-	state_current_rot = Sarc.current_rotation
+		objects[object.name] = object.global_position
+	snapshot["objects"] = objects
+
+	snapshot["sarc"] = {
+		"dir": Sarc.sarc_dir,
+		"pos": Sarc.position,
+		"rot": Sarc.rotation,
+		"upright": Sarc.upright,
+		"current_rot": Sarc.current_rotation,
+	}
+
+	history.append(snapshot)
 
 
 func load_state() -> void:
+	if history.is_empty():
+		return
+
+	# The last entry is the state from just before the latest move
+	var snapshot: Dictionary = history.pop_back()
+
 	for object in get_tree().get_nodes_in_group("UndoObjects"):
-		if state.has(object.name):
-			object.global_position = state[object.name]
-	Sarc.sarc_dir = state_sarc_dir
-	Sarc.position = state_sarc_pos
-	Sarc.rotation = state_sarc_rot
-	Sarc.upright = state_upright
-	Sarc.current_rotation = state_current_rot
-	print(state)
-	state = {}
-		
+		if snapshot["objects"].has(object.name):
+			object.global_position = snapshot["objects"][object.name]
+
+	var s: Dictionary = snapshot["sarc"]
+	Sarc.sarc_dir = s["dir"]
+	Sarc.position = s["pos"]
+	Sarc.rotation = s["rot"]
+	Sarc.upright = s["upright"]
+	Sarc.current_rotation = s["current_rot"]
